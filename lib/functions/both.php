@@ -216,7 +216,7 @@
 		if($interval == 3600){
 			$string = _n('hour', 'hours', $singular, 'easyReservations');
 		} elseif($interval == 86400){
-			$string = _n('day', 'days', $singular, 'easyReservations');
+			$string = _n('night', 'nights', $singular, 'easyReservations');
 		} elseif($interval == 604800){
 			$string = _n('week', 'weeks', $singular, 'easyReservations');
 		} else $string = _n('time', 'times', $singular, 'easyReservations');

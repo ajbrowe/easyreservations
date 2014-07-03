@@ -1214,9 +1214,9 @@ if(isset($edit)){
 							<td nowrap><img style="vertical-align:text-bottom;" src="<?php echo RESERVATIONS_URL; ?>images/persons.png"> <?php echo __( 'Persons' , 'easyReservations' );?></td> 
 							<td>
 								<?php printf ( __( 'Adult\'s' , 'easyReservations' ));?>:
-								<select name="persons" onchange="easyreservations_send_price_admin();"><?php echo easyreservations_num_options(1,50,$res->adults); ?></select>
+								<select name="persons" onchange="easyreservations_send_price_admin();"><?php echo easyreservations_num_options(1,70,$res->adults); ?></select>
 								<?php printf ( __( 'Children\'s' , 'easyReservations' ));?>:
-								<select name="childs" onchange="easyreservations_send_price_admin();"><?php echo easyreservations_num_options(0,50,$res->childs); ?></select>
+								<select name="childs" onchange="easyreservations_send_price_admin();"><?php echo easyreservations_num_options(0,70,$res->childs); ?></select>
 							</td>
 						</tr>
 						<tr>

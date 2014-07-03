@@ -760,28 +760,28 @@
 				if($mini) $errors[] = array('pers-min', $resource_req['pers-min']);
 				else {
 					$errors[] = 'easy-form-persons';
-					$errors[] =  sprintf(__( 'At least %1$s persons in %2$s' , 'easyReservations' ), $resource_req['pers-min'], __($the_rooms_array[$this->resource]->post_title));
+					$errors[] =  sprintf(__( 'At least %1$s persons for %2$s' , 'easyReservations' ), $resource_req['pers-min'], __($the_rooms_array[$this->resource]->post_title));
 				}
 			}
 			if($resource_req['pers-max'] != 0 && $resource_req['pers-max'] < ($this->adults+$this->childs)){
 				if($mini) $errors[] = array('pers-max', $resource_req['pers-max']);
 				else {
 					$errors[] = 'easy-form-persons';
-					$errors[] =  sprintf(__( 'Maximum %1$s persons in %2$s' , 'easyReservations' ), $resource_req['pers-max'], __($the_rooms_array[$this->resource]->post_title));
+					$errors[] =  sprintf(__( 'Maximum %1$s persons for %2$s' , 'easyReservations' ), $resource_req['pers-max'], __($the_rooms_array[$this->resource]->post_title));
 				}
 			}
 			if($resource_req['nights-min'] != 0 && $resource_req['nights-min'] > $this->times){
 				if($mini) $errors[] = array('nights-min', $resource_req['nights-min']);
 				else {
 					$errors[] = 'date';
-					$errors[] =  sprintf(__( 'At least %1$s %2$s in %3$s' , 'easyReservations' ), $resource_req['nights-min'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-min']), __($the_rooms_array[$this->resource]->post_title));
+					$errors[] =  sprintf(__( 'At least %1$s %2$s for %3$s' , 'easyReservations' ), $resource_req['nights-min'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-min']), __($the_rooms_array[$this->resource]->post_title));
 				}
 			}
 			if($resource_req['nights-max'] != 0 && $resource_req['nights-max'] < $this->times){
 				if($mini) $errors[] = array('nights-max', $resource_req['nights-max']);
 				else {
 					$errors[] = 'date';
-					$errors[] =  sprintf(__( 'Maximum %1$s %2$s in %3$s' , 'easyReservations' ), $resource_req['nights-max'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-max']), __($the_rooms_array[$this->resource]->post_title));
+					$errors[] =  sprintf(__( 'Maximum %1$s %2$s for %3$s' , 'easyReservations' ), $resource_req['nights-max'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-max']), __($the_rooms_array[$this->resource]->post_title));
 				}
 			}
 			$daynames = easyreservations_get_date_name(0, 3);

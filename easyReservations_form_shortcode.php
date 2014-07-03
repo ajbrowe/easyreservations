@@ -20,9 +20,9 @@ function reservations_form_shortcode($atts){
 		'multiple' => 0,
 		'resourcename' => __( 'Room' , 'easyReservations' ),
 		'cancel' => __( 'Cancel' , 'easyReservations' ),
-		'credit' => __( 'Your reservation is complete' , 'easyReservations' ),
-		'submit' => __( 'Your reservation was sent' , 'easyReservations' ),
-		'validate' =>__( 'Reservation was validated succesfully' , 'easyReservations' ),
+		'credit' => __( 'Your enquiry is complete' , 'easyReservations' ),
+		'submit' => __( 'Your enquiry was sent' , 'easyReservations' ),
+		'validate' =>__( 'Enquiry was validated succesfully' , 'easyReservations' ),
 		'subcredit' => '',
 		'discount' => 100,
 		'subsubmit' => '',
@@ -391,7 +391,7 @@ function reservations_form_shortcode($atts){
 	if($atts['pers'] && $atts['pers'] == 1) $popuptemplate.= '<th>'.__('Persons', 'easyReservations').'</th>';
 	$popuptemplate.= '<th>'.__('Price', 'easyReservations').'</th>';
 	$popuptemplate.= '<th></th></tr></thead><tbody id="easy_overlay_tbody"></tbody></table>';
-	$popuptemplate.= '<input type="button" onclick="easyAddAnother();" value="'.__('Add another reservation', 'easyReservations').'"><input class="easy_overlay_submit"  type="button" onclick="easyFormSubmit(1);" value="'.__('Submit all reservations', 'easyReservations').'">';
+	$popuptemplate.= '<input type="button" onclick="easyAddAnother();" value="'.__('Add another enquiry', 'easyReservations').'"><input class="easy_overlay_submit"  type="button" onclick="easyFormSubmit(1);" value="'.__('Submit all enquiries', 'easyReservations').'">';
 	$easyreservations_script.= str_replace(array("\n","\r"), '', trim('var easyReservationAtts = '.json_encode($atts).';var easyInnerlayTemplate = "'.addslashes($popuptemplate).'";'));;
 	if(!empty($atts['datefield'])) define('EASYDATEFIELD', $atts['datefield']);
 	add_action('wp_print_footer_scripts', 'easyreservations_make_datepicker');
