@@ -1,13 +1,10 @@
 <?php
-
 class Resource {
-	
 	public $id;
 	public $title;
 	public $content;
 	public $interval = 86400;
 	public $menu_order = 0;
-
 
 	public function __construct($id = false, $informations  = array('all')){
 		easyreservations_load_resources(true);
@@ -47,7 +44,7 @@ class Resource {
 		$rooms = $wpdb->get_results("SELECT post_content FROM ".$wpdb->prefix ."posts WHERE id='$this->id' ");
 		return $this->content = $rooms[0]->post_content;
 	}
-	
+
 	public function getSettingName($setting){
 		$array =  array(
 				'interval' => 'easy-resource-interval',
@@ -64,11 +61,11 @@ class Resource {
 		if(isset($array[$setting])) return $array[$setting];
 		else return false;
 	}
-	
+
 	public function loadSetting($name){
 		$this->$name = get_post_meta($this->id, $this->getSettingName($name), TRUE);
 	}
-	
+
 	public function editResource($informations = array('all')){
 		if(!$this->Validate()){
 			global $wpdb;
@@ -94,7 +91,7 @@ class Resource {
 			return false;
 		} else return true;
 	}
-	
+
 	public function deleteResource(){
 		$return = wp_delete_post( $this->id, true );
 		if($return) return false;
@@ -112,7 +109,7 @@ class Resource {
 					return true;
 				}
 				if(isset($this->groundprice) && (!is_numeric($this->groundprice) || $this->groundprice < 0)){
-					throw new easyException( 'Groundprice must be float and >= 0 - Groundprice: '.$this->groundprice );
+					throw new easyException( 'Base price must be float and >= 0 | Base price: '.$this->groundprice );
 					return true;
 				}
 				if(isset($this->child) && (!is_numeric($this->child))){
