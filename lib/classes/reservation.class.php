@@ -922,9 +922,6 @@
 				else return $errors;
 			}
 
-			if(empty($errors)) return false;
-			else return $errors;
-		}
 
 		private function checkRequirements($resource_req, $errors, $mini = false){
 			easyreservations_load_resources(true);
@@ -1003,7 +1000,7 @@
 				}
 				return $errors;
 			}
-
+                }
 			public function updatePricepaid($amount){
 				if(!empty($this->pricepaid)){
 					$explode = explode(';', $this->pricepaid);
