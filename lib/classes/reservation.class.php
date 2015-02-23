@@ -922,37 +922,37 @@
 				else return $errors;
 			}
 
-
-		private function checkRequirements($resource_req, $errors, $mini = false){
-			easyreservations_load_resources(true);
-			global $the_rooms_array, $the_rooms_intervals_array, $easy_max_persons;
-			$easy_max_persons = $resource_req['pers-max'];
-			if($resource_req['pers-min'] > ($this->adults+$this->childs)){
-				if($mini) $errors[] = array('pers-min', $resource_req['pers-min']);
-				else {
-					$errors[] = 'easy-form-persons';
-					$errors[] =  sprintf(__( 'At least %1$s persons for %2$s' , 'easyReservations' ), $resource_req['pers-min'], __($the_rooms_array[$this->resource]->post_title));
+			private function checkRequirements($resource_req, $errors, $mini = false){
+				easyreservations_load_resources(true);
+				global $the_rooms_array, $the_rooms_intervals_array, $easy_max_persons;
+				$easy_max_persons = $resource_req['pers-max'];
+				if($resource_req['pers-min'] > ($this->adults+$this->childs)){
+					if($mini) $errors[] = array('pers-min', $resource_req['pers-min']);
+					else {
+						$errors[] = 'easy-form-persons';
+						$errors[] =  sprintf(__( 'At least %1$s persons for %2$s' , 'easyReservations' ), $resource_req['pers-min'], __($the_rooms_array[$this->resource]->post_title));
+					}
 				}
-			}
-			if($resource_req['pers-max'] != 0 && $resource_req['pers-max'] < ($this->adults+$this->childs)){
-				if($mini) $errors[] = array('pers-max', $resource_req['pers-max']);
-				else {
-					$errors[] = 'easy-form-persons';
-					$errors[] =  sprintf(__( 'Maximum %1$s persons for %2$s' , 'easyReservations' ), $resource_req['pers-max'], __($the_rooms_array[$this->resource]->post_title));
+				if($resource_req['pers-max'] != 0 && $resource_req['pers-max'] < ($this->adults+$this->childs)){
+					if($mini) $errors[] = array('pers-max', $resource_req['pers-max']);
+					else {
+						$errors[] = 'easy-form-persons';
+						$errors[] =  sprintf(__( 'Maximum %1$s persons for %2$s' , 'easyReservations' ), $resource_req['pers-max'], __($the_rooms_array[$this->resource]->post_title));
+					}
 				}
-			}
-			if($resource_req['nights-min'] != 0 && $resource_req['nights-min'] > $this->times){
-				if($mini) $errors[] = array('nights-min', $resource_req['nights-min']);
-				else {
-					$errors[] = 'date';
-					$errors[] =  sprintf(__( 'At least %1$s %2$s for %3$s' , 'easyReservations' ), $resource_req['nights-min'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-min']), __($the_rooms_array[$this->resource]->post_title));
+				if($resource_req['nights-min'] != 0 && $resource_req['nights-min'] > $this->times){
+					if($mini) $errors[] = array('nights-min', $resource_req['nights-min']);
+					else {
+						$errors[] = 'date';
+						$errors[] =  sprintf(__( 'At least %1$s %2$s for %3$s' , 'easyReservations' ), $resource_req['nights-min'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-min']), __($the_rooms_array[$this->resource]->post_title));
+					}
 				}
-			}
-			if($resource_req['nights-max'] != 0 && $resource_req['nights-max'] < $this->times){
-				if($mini) $errors[] = array('nights-max', $resource_req['nights-max']);
-				else {
-					$errors[] = 'date';
-					$errors[] =  sprintf(__( 'Maximum %1$s %2$s for %3$s' , 'easyReservations' ), $resource_req['nights-max'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-max']), __($the_rooms_array[$this->resource]->post_title));
+				if($resource_req['nights-max'] != 0 && $resource_req['nights-max'] < $this->times){
+					if($mini) $errors[] = array('nights-max', $resource_req['nights-max']);
+					else {
+						$errors[] = 'date';
+						$errors[] =  sprintf(__( 'Maximum %1$s %2$s for %3$s' , 'easyReservations' ), $resource_req['nights-max'], easyreservations_interval_infos($the_rooms_intervals_array[$this->resource], 0, $resource_req['nights-max']), __($the_rooms_array[$this->resource]->post_title));
+					}
 				}
 				$day_names = easyreservations_get_date_name(0, 3);
 				if(isset($resource_req['start-on']) && $resource_req['start-on'] != 0){
@@ -1000,7 +1000,7 @@
 				}
 				return $errors;
 			}
-                }
+
 			public function updatePricepaid($amount){
 				if(!empty($this->pricepaid)){
 					$explode = explode(';', $this->pricepaid);

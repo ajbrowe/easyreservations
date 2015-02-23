@@ -1608,5 +1608,4 @@ if(isset($sendmail)) {
 
 function easyreservations_restrict_input_dash(){
 	easyreservations_generate_restrict(array(array('#customPamount,input[name^="custom_price"]', true), array('input[name="priceset"],input[name="EDITwaspaid"],input[name="ccnumber"]', false)));
-
 }?>
