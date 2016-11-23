@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: easyReservations\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-08 12:10+0100\n"
-"PO-Revision-Date: 2015-05-08 12:15+0100\n"
+"POT-Creation-Date: 2015-09-07 11:57+0200\n"
+"PO-Revision-Date: 2015-09-07 11:57+0200\n"
 "Last-Translator: Feryaz Beer <support@easyreservations.org>\n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -12,8 +12,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,272,-1,-1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: easyReservations_admin_main.php:39 easyReservations_admin_main.php:55
@@ -82,8 +83,8 @@ msgstr "Reserva #%1$d copiada com #%2$d"
 msgid "Reservation #%d added"
 msgstr "Reserva #%d afegida"
 
-#: easyReservations_admin_main.php:261 lib/functions/ajax.php:409
-#: lib/functions/ajax.php:419
+#: easyReservations_admin_main.php:261 lib/functions/ajax.php:412
+#: lib/functions/ajax.php:422
 #, fuzzy
 msgid "Wrong date format"
 msgstr "Format de data"
@@ -115,15 +116,14 @@ msgstr "Reserva rebutjada"
 msgid "Reservations Dashboard"
 msgstr "Panel de Reserves"
 
-#: easyReservations_admin_main.php:351
-#: easyReservations_admin_resources.php:204
+#: easyReservations_admin_main.php:351 easyReservations_admin_resources.php:204
 msgid "Add New"
 msgstr "Afegir Nou"
 
 #: easyReservations_admin_main.php:363 easyReservations_admin_main.php:974
 #: easyReservations_admin_main.php:999 easyReservations_admin_main.php:1306
 #: easyReservations_admin_main.php:1477 lib/core/core.php:338
-#: lib/modules/hourlycal/hourlycal.php:206 lib/modules/paypal/paypal.php:344
+#: lib/modules/hourlycal/hourlycal.php:207 lib/modules/paypal/paypal.php:344
 msgid "None"
 msgstr "Cap"
 
@@ -160,10 +160,10 @@ msgstr "Arribada avui"
 #: easyReservations_admin_main.php:953 easyReservations_admin_main.php:1070
 #: easyReservations_admin_main.php:1234 easyReservations_admin_main.php:1412
 #: easyReservations_admin_resources.php:737
-#: easyReservations_admin_settings.php:785
-#: easyReservations_admin_settings.php:1015 lib/core/core.php:287
-#: lib/functions/admin.php:351 lib/functions/ajax.php:793
-#: lib/functions/ajax.php:834 lib/modules/htmlmails/htmlmails.php:127
+#: easyReservations_admin_settings.php:788
+#: easyReservations_admin_settings.php:1018 lib/core/core.php:287
+#: lib/functions/admin.php:351 lib/functions/ajax.php:799
+#: lib/functions/ajax.php:840 lib/modules/htmlmails/htmlmails.php:127
 #: lib/modules/import/import.php:72 lib/modules/paypal/creditcards.php:225
 #: lib/modules/paypal/creditcards.php:250
 #: lib/modules/paypal/creditcards.php:345 lib/modules/paypal/paypal.php:226
@@ -176,13 +176,12 @@ msgstr "Nom"
 
 #: easyReservations_admin_main.php:953 easyReservations_admin_main.php:1088
 #: easyReservations_admin_main.php:1263 easyReservations_admin_main.php:1439
-#: easyReservations_admin_main.php:1554
-#: easyReservations_admin_settings.php:424
+#: easyReservations_admin_main.php:1554 easyReservations_admin_settings.php:427
 #: js/tinyMCE/tinyMCE_shortcode_add.php:123
 #: js/tinyMCE/tinyMCE_shortcode_add.php:183 lib/functions/admin.php:357
-#: lib/functions/ajax.php:811 lib/functions/ajax.php:852
-#: lib/modules/hourlycal/hourlycal.php:185
-#: lib/modules/hourlycal/hourlycal.php:205
+#: lib/functions/ajax.php:817 lib/functions/ajax.php:858
+#: lib/modules/hourlycal/hourlycal.php:186
+#: lib/modules/hourlycal/hourlycal.php:206
 #: lib/modules/htmlmails/htmlmails.php:122
 #: lib/modules/htmlmails/htmlmails.php:385 lib/modules/import/import.php:74
 #: lib/modules/invoice/invoice.php:587 lib/modules/search/search.php:69
@@ -197,8 +196,8 @@ msgstr "Instal·lació"
 #: easyReservations_admin_resources.php:675
 #: easyReservations_admin_resources.php:713
 #: easyReservations_admin_resources.php:968
-#: easyReservations_form_shortcode.php:429 lib/functions/admin.php:359
-#: lib/functions/ajax.php:807 lib/functions/ajax.php:848
+#: easyReservations_form_shortcode.php:435 lib/functions/admin.php:359
+#: lib/functions/ajax.php:813 lib/functions/ajax.php:854
 #: lib/modules/htmlmails/htmlmails.php:124 lib/modules/import/import.php:72
 #: lib/modules/statistics/statistics.php:518
 #: lib/modules/statistics/statistics.php:715
@@ -214,13 +213,13 @@ msgstr "Persones"
 #: easyReservations_admin_resources.php:729
 #: easyReservations_admin_resources.php:1048
 #: easyReservations_admin_resources.php:1055
-#: easyReservations_admin_settings.php:266
-#: easyReservations_form_shortcode.php:147
-#: easyReservations_form_shortcode.php:430
+#: easyReservations_admin_settings.php:269
+#: easyReservations_form_shortcode.php:153
+#: easyReservations_form_shortcode.php:436
 #: js/tinyMCE/tinyMCE_shortcode_add.php:191 lib/functions/admin.php:109
-#: lib/functions/admin.php:366 lib/functions/ajax.php:369
-#: lib/functions/ajax.php:819 lib/functions/ajax.php:860
-#: lib/modules/hourlycal/hourlycal.php:189
+#: lib/functions/admin.php:366 lib/functions/ajax.php:372
+#: lib/functions/ajax.php:825 lib/functions/ajax.php:866
+#: lib/modules/hourlycal/hourlycal.php:190
 #: lib/modules/htmlmails/htmlmails.php:136
 #: lib/modules/htmlmails/htmlmails.php:387 lib/modules/search/search.php:54
 #: lib/modules/search/search.php:58 lib/modules/search/search.php:356
@@ -238,69 +237,69 @@ msgstr "Data de sortida"
 #: easyReservations_admin_main.php:1027
 #: easyReservations_admin_resources.php:1016
 #: easyReservations_admin_resources.php:1049
-#: easyReservations_admin_settings.php:421
-#: easyReservations_admin_settings.php:423
-#: easyReservations_admin_settings.php:944
-#: easyReservations_admin_settings.php:993
-#: easyReservations_admin_settings.php:1037
-#: easyReservations_admin_settings.php:1245
+#: easyReservations_admin_settings.php:424
+#: easyReservations_admin_settings.php:426
+#: easyReservations_admin_settings.php:947
+#: easyReservations_admin_settings.php:996
+#: easyReservations_admin_settings.php:1040
+#: easyReservations_admin_settings.php:1248
 #: lib/modules/search/attributes.php:120
 msgid "Type"
 msgstr "Tipus"
 
 #: easyReservations_admin_main.php:1027 easyReservations_admin_main.php:1298
-#: easyReservations_admin_main.php:1473 lib/functions/ajax.php:749
+#: easyReservations_admin_main.php:1473 lib/functions/ajax.php:755
 msgid "Approved"
 msgstr "Aprovat"
 
 #: easyReservations_admin_main.php:1027 easyReservations_admin_main.php:1298
-#: easyReservations_admin_main.php:1473 lib/functions/ajax.php:738
-#: lib/functions/ajax.php:749
+#: easyReservations_admin_main.php:1473 lib/functions/ajax.php:744
+#: lib/functions/ajax.php:755
 msgid "Pending"
 msgstr "Pendent"
 
 #: easyReservations_admin_main.php:1027 easyReservations_admin_main.php:1298
-#: easyReservations_admin_main.php:1473 lib/functions/ajax.php:739
-#: lib/functions/ajax.php:749
+#: easyReservations_admin_main.php:1473 lib/functions/ajax.php:745
+#: lib/functions/ajax.php:755
 msgid "Rejected"
 msgstr "Rebutjada"
 
 #: easyReservations_admin_main.php:1027 easyReservations_admin_main.php:1298
-#: lib/functions/ajax.php:749
+#: lib/functions/ajax.php:755
 msgid "Trashed"
 msgstr "Eliminada"
 
 #: easyReservations_admin_main.php:1028
 #: easyReservations_admin_resources.php:551
-#: easyReservations_admin_settings.php:268
-#: easyReservations_form_shortcode.php:427 lib/modules/coupons/coupons.php:35
+#: easyReservations_admin_settings.php:271
+#: easyReservations_form_shortcode.php:433 lib/modules/coupons/coupons.php:35
 #: lib/modules/useredit/useredit.php:358
 msgid "Time"
 msgstr "Temps"
 
 #: easyReservations_admin_main.php:1028 lib/modules/useredit/useredit.php:359
-#: overview.php:159
+#: overview.php:160
 msgid "Past"
 msgstr "Passades"
 
-#: easyReservations_admin_main.php:1028 overview.php:107 overview.php:160
+#: easyReservations_admin_main.php:1028 overview.php:108 overview.php:161
 msgid "Present"
 msgstr "Actuals"
 
 #: easyReservations_admin_main.php:1028 lib/modules/useredit/useredit.php:361
-#: overview.php:161
+#: overview.php:162
 msgid "Future"
 msgstr "Properes"
 
 #: easyReservations_admin_main.php:1055 easyReservations_admin_main.php:1545
 #: easyReservations_admin_main.php:1560 lib/functions/admin.php:256
-#: lib/functions/ajax.php:939
+#: lib/functions/ajax.php:945
 msgid "Approve"
 msgstr "Aprovar"
 
 #: easyReservations_admin_main.php:1055 easyReservations_admin_main.php:1545
 #: easyReservations_admin_main.php:1560 lib/functions/admin.php:258
-#: lib/functions/ajax.php:940
+#: lib/functions/ajax.php:946
 msgid "Reject"
 msgstr "Rebutjar"
 
@@ -309,55 +308,51 @@ msgid "View"
 msgstr "Veure"
 
 #: easyReservations_admin_main.php:1057 lib/functions/admin.php:260
-#: lib/functions/ajax.php:938 lib/modules/search/attributes.php:137
+#: lib/functions/ajax.php:944 lib/modules/search/attributes.php:137
 msgid "Edit"
 msgstr "Editar"
 
 #: easyReservations_admin_main.php:1074 lib/functions/admin.php:109
-#: lib/functions/ajax.php:789 lib/functions/ajax.php:830
+#: lib/functions/ajax.php:795 lib/functions/ajax.php:836
 #: lib/modules/import/import.php:73 lib/modules/statistics/statistics.php:713
 #: lib/modules/useredit/useredit.php:344 lib/modules/useredit/useredit.php:674
 msgid "Date"
 msgstr "Data"
 
 #: easyReservations_admin_main.php:1080 easyReservations_admin_main.php:1270
-#: easyReservations_admin_main.php:1448
-#: easyReservations_admin_settings.php:800
-#: easyReservations_admin_settings.php:1020 lib/functions/admin.php:356
-#: lib/functions/ajax.php:803 lib/functions/ajax.php:844
+#: easyReservations_admin_main.php:1448 easyReservations_admin_settings.php:803
+#: easyReservations_admin_settings.php:1023 lib/functions/admin.php:356
+#: lib/functions/ajax.php:809 lib/functions/ajax.php:850
 #: lib/modules/htmlmails/htmlmails.php:128 lib/modules/import/import.php:72
-#: lib/modules/paypal/creditcards.php:344
-#: lib/modules/useredit/useredit.php:785 lib/modules/useredit/useredit.php:872
+#: lib/modules/paypal/creditcards.php:344 lib/modules/useredit/useredit.php:785
+#: lib/modules/useredit/useredit.php:872
 #, fuzzy
 msgid "Email"
 msgstr "email"
 
 #: easyReservations_admin_main.php:1085 easyReservations_admin_main.php:1256
-#: easyReservations_admin_main.php:1432
-#: easyReservations_admin_settings.php:432
-#: easyReservations_admin_settings.php:731
-#: easyReservations_admin_settings.php:1005
+#: easyReservations_admin_main.php:1432 easyReservations_admin_settings.php:435
+#: easyReservations_admin_settings.php:734
+#: easyReservations_admin_settings.php:1008
 #: lib/modules/htmlmails/htmlmails.php:125
 #: lib/modules/htmlmails/htmlmails.php:382
 msgid "Adults"
 msgstr "Adults"
 
 #: easyReservations_admin_main.php:1085 easyReservations_admin_main.php:1258
-#: easyReservations_admin_main.php:1434
-#: easyReservations_admin_resources.php:27
+#: easyReservations_admin_main.php:1434 easyReservations_admin_resources.php:27
 #: easyReservations_admin_resources.php:97
 #: easyReservations_admin_resources.php:676
-#: easyReservations_admin_settings.php:433
-#: easyReservations_admin_settings.php:1010
+#: easyReservations_admin_settings.php:436
+#: easyReservations_admin_settings.php:1013
 #, fuzzy
 msgid "Children"
 msgstr "nens"
 
 #: easyReservations_admin_main.php:1093 easyReservations_admin_main.php:1274
-#: easyReservations_admin_main.php:1452
-#: easyReservations_admin_settings.php:815
-#: easyReservations_admin_settings.php:1025 lib/functions/admin.php:363
-#: lib/functions/ajax.php:813 lib/functions/ajax.php:854
+#: easyReservations_admin_main.php:1452 easyReservations_admin_settings.php:818
+#: easyReservations_admin_settings.php:1028 lib/functions/admin.php:363
+#: lib/functions/ajax.php:819 lib/functions/ajax.php:860
 #: lib/modules/htmlmails/htmlmails.php:129
 #: lib/modules/htmlmails/htmlmails.php:384 lib/modules/import/import.php:74
 #: lib/modules/useredit/useredit.php:790
@@ -422,9 +417,9 @@ msgstr "Estat i Preu"
 #: easyReservations_admin_main.php:1297 easyReservations_admin_main.php:1472
 #: easyReservations_admin_resources.php:221
 #: easyReservations_admin_resources.php:541
-#: easyReservations_admin_settings.php:286
-#: easyReservations_admin_settings.php:1453 lib/functions/admin.php:360
-#: lib/functions/ajax.php:801 lib/functions/ajax.php:842
+#: easyReservations_admin_settings.php:289
+#: easyReservations_admin_settings.php:1456 lib/functions/admin.php:360
+#: lib/functions/ajax.php:807 lib/functions/ajax.php:848
 #: lib/modules/import/import.php:72 lib/modules/statistics/statistics.php:516
 #: lib/modules/useredit/useredit.php:347 lib/modules/useredit/useredit.php:353
 #: lib/modules/useredit/useredit.php:676 lib/modules/useredit/useredit.php:906
@@ -432,7 +427,7 @@ msgid "Status"
 msgstr "Estat"
 
 #: easyReservations_admin_main.php:1301 easyReservations_admin_main.php:1484
-#: lib/functions/ajax.php:797 lib/functions/ajax.php:838
+#: lib/functions/ajax.php:803 lib/functions/ajax.php:844
 #: lib/modules/import/import.php:73 lib/modules/useredit/useredit.php:679
 msgid "Reserved"
 msgstr "Reservat"
@@ -446,7 +441,7 @@ msgid "Fixed Price"
 msgstr "Preu Fixat"
 
 #: easyReservations_admin_main.php:1317 easyReservations_admin_main.php:1391
-#: lib/functions/ajax.php:987 lib/modules/htmlmails/htmlmails.php:137
+#: lib/functions/ajax.php:993 lib/modules/htmlmails/htmlmails.php:137
 #: lib/modules/htmlmails/htmlmails.php:388
 #: lib/modules/statistics/statistics.php:517
 #: lib/modules/useredit/useredit.php:745
@@ -495,8 +490,8 @@ msgid "Visible"
 msgstr "Visible"
 
 #: easyReservations_admin_main.php:1504 easyReservations_admin_main.php:1519
-#: easyReservations_admin_settings.php:831
-#: easyReservations_admin_settings.php:1043
+#: easyReservations_admin_settings.php:834
+#: easyReservations_admin_settings.php:1046
 msgid "Hidden"
 msgstr "Ocult"
 
@@ -551,21 +546,21 @@ msgid "Send"
 msgstr "Enviar"
 
 #: easyReservations_admin_main_stats.php:35
-#: lib/classes/reservation.class.php:1241
+#: lib/classes/reservation.class.php:1244
 #: lib/modules/statistics/statistics.php:423
 #: lib/modules/useredit/useredit.php:354
 msgid "approved"
 msgstr "aprovat"
 
 #: easyReservations_admin_main_stats.php:35
-#: lib/classes/reservation.class.php:1241
+#: lib/classes/reservation.class.php:1244
 #: lib/modules/statistics/statistics.php:423
 #: lib/modules/useredit/useredit.php:356
 msgid "rejected"
 msgstr "rebutjat"
 
 #: easyReservations_admin_main_stats.php:35
-#: lib/classes/reservation.class.php:1241
+#: lib/classes/reservation.class.php:1244
 #: lib/modules/statistics/statistics.php:423
 #: lib/modules/useredit/useredit.php:355
 msgid "pending"
@@ -575,11 +570,6 @@ msgstr "pendent"
 #, fuzzy
 msgid "the base price changes to"
 msgstr "Preu base"
-
-#: easyReservations_admin_resources.php:23
-#: lib/modules/useredit/useredit.php:441
-msgid "Day"
-msgstr "Dia"
 
 #: easyReservations_admin_resources.php:24
 #: easyReservations_admin_resources.php:711
@@ -695,8 +685,7 @@ msgid "Base"
 msgstr ""
 
 #: easyReservations_admin_resources.php:123
-#: easyReservations_admin_resources.php:1052
-#: lib/modules/coupons/coupons.php:37
+#: easyReservations_admin_resources.php:1052 lib/modules/coupons/coupons.php:37
 msgid "Discount"
 msgstr "Descompte"
 
@@ -733,17 +722,17 @@ msgid "Post View"
 msgstr "Veure missatge"
 
 #: easyReservations_admin_resources.php:215
-#: easyReservations_admin_settings.php:561
-#: easyReservations_admin_settings.php:581
-#: easyReservations_admin_settings.php:1200
-#: easyReservations_admin_settings.php:1244 lib/modules/paypal/paypal.php:179
+#: easyReservations_admin_settings.php:564
+#: easyReservations_admin_settings.php:584
+#: easyReservations_admin_settings.php:1203
+#: easyReservations_admin_settings.php:1247 lib/modules/paypal/paypal.php:179
 #: lib/modules/useredit/useredit.php:395
 msgid "Title"
 msgstr "Títol"
 
 #: easyReservations_admin_resources.php:216
-#: easyReservations_admin_settings.php:1243
-#: easyReservations_admin_settings.php:1396 lib/functions/admin.php:350
+#: easyReservations_admin_settings.php:1246
+#: easyReservations_admin_settings.php:1399 lib/functions/admin.php:350
 #: lib/modules/import/import.php:72 lib/modules/useredit/useredit.php:342
 #: lib/modules/useredit/useredit.php:673 lib/modules/useredit/useredit.php:870
 msgid "ID"
@@ -764,7 +753,7 @@ msgid "Filter"
 msgstr "Filtre"
 
 #: easyReservations_admin_resources.php:222
-#: easyReservations_admin_settings.php:860
+#: easyReservations_admin_settings.php:863
 msgid "Excerpt"
 msgstr "Extracte"
 
@@ -922,7 +911,7 @@ msgid "resources condition change to"
 msgstr "la condició de la instal·lació ha canviat a"
 
 #: easyReservations_admin_resources.php:623
-#: easyReservations_admin_resources.php:633 lib/functions/ajax.php:740
+#: easyReservations_admin_resources.php:633 lib/functions/ajax.php:746
 msgid "All"
 msgstr "tot"
 
@@ -975,7 +964,7 @@ msgid "Calculate base price only once"
 msgstr ""
 
 #: easyReservations_admin_resources.php:707
-#: easyReservations_admin_settings.php:542 lib/functions/admin.php:144
+#: easyReservations_admin_settings.php:545 lib/functions/admin.php:144
 msgid "Price per person"
 msgstr "Preu per persona"
 
@@ -987,7 +976,7 @@ msgstr "Impostos"
 #: easyReservations_admin_resources.php:708
 #: easyReservations_admin_resources.php:728
 #: easyReservations_admin_resources.php:1431
-#: easyReservations_admin_settings.php:410 lib/modules/invoice/invoice.php:651
+#: easyReservations_admin_settings.php:413 lib/modules/invoice/invoice.php:651
 msgid "Add"
 msgstr "Afegir"
 
@@ -1014,9 +1003,9 @@ msgstr "Assumpte"
 #: easyReservations_admin_resources.php:713
 #: easyReservations_admin_resources.php:962
 #: easyReservations_admin_resources.php:970
-#: easyReservations_admin_settings.php:689
-#: easyReservations_admin_settings.php:735
-#: easyReservations_admin_settings.php:762
+#: easyReservations_admin_settings.php:692
+#: easyReservations_admin_settings.php:738
+#: easyReservations_admin_settings.php:765
 msgid "Min"
 msgstr "Min"
 
@@ -1024,9 +1013,9 @@ msgstr "Min"
 #: easyReservations_admin_resources.php:713
 #: easyReservations_admin_resources.php:962
 #: easyReservations_admin_resources.php:970
-#: easyReservations_admin_settings.php:695
-#: easyReservations_admin_settings.php:741
-#: easyReservations_admin_settings.php:768 lib/modules/search/search.php:352
+#: easyReservations_admin_settings.php:698
+#: easyReservations_admin_settings.php:744
+#: easyReservations_admin_settings.php:771 lib/modules/search/search.php:352
 msgid "Max"
 msgstr "Màx"
 
@@ -1081,9 +1070,8 @@ msgid "Date range"
 msgstr "Rang de dates"
 
 #: easyReservations_admin_resources.php:778
-#: lib/modules/hourlycal/hourlycal.php:209
+#: lib/modules/hourlycal/hourlycal.php:210
 #: lib/modules/htmlmails/htmlmails.php:119
-#: lib/modules/useredit/useredit.php:439 lib/modules/useredit/useredit.php:440
 msgid "Hours"
 msgstr "Hores"
 
@@ -1095,17 +1083,6 @@ msgstr "Hores"
 msgid "select nothing to change price/availability for entire"
 msgstr "No seleccionar res per canviar el preu/disponibilidad per complert"
 
-#: easyReservations_admin_resources.php:779
-#: easyReservations_admin_settings.php:262
-msgid "day"
-msgstr "dia"
-
-#: easyReservations_admin_resources.php:814 lib/functions/admin.php:396
-#: lib/modules/hourlycal/hourlycal.php:201 overview.php:104 overview.php:105
-#: overview.php:106 overview.php:108 overview.php:109 overview.php:110
-msgid "Days"
-msgstr "Dies"
-
 #: easyReservations_admin_resources.php:815
 msgid "calendar week"
 msgstr "calendari setmanal"
@@ -1113,11 +1090,6 @@ msgstr "calendari setmanal"
 #: easyReservations_admin_resources.php:831
 msgid "Calendar Week"
 msgstr "Calendari Setmanal"
-
-#: easyReservations_admin_resources.php:832
-#: easyReservations_admin_settings.php:262
-msgid "month"
-msgstr "mes"
 
 #: easyReservations_admin_resources.php:900
 msgid "Months"
@@ -1294,7 +1266,7 @@ msgid "Database cleaned"
 msgstr "Base de Dades neta"
 
 #: easyReservations_admin_settings.php:18
-#: easyReservations_form_shortcode.php:70 lib/functions/ajax.php:231
+#: easyReservations_form_shortcode.php:71 lib/functions/ajax.php:231
 #: lib/modules/coupons/coupons.php:134 lib/modules/invoice/invoice.php:357
 #: lib/modules/paypal/creditcards.php:280 lib/modules/paypal/paypal.php:71
 msgid "Back"
@@ -1347,8 +1319,8 @@ msgid "Form"
 msgstr "Formulari"
 
 #: easyReservations_admin_settings.php:207
-#: easyReservations_admin_settings.php:906
-#: easyReservations_admin_settings.php:1047
+#: easyReservations_admin_settings.php:909
+#: easyReservations_admin_settings.php:1050
 #: lib/modules/htmlmails/htmlmails.php:130
 msgid "Custom"
 msgstr "Personalitzat"
@@ -1371,93 +1343,79 @@ msgid "Grey"
 msgstr "Gris"
 
 #: easyReservations_admin_settings.php:257
-#: easyReservations_admin_settings.php:300
-#: easyReservations_admin_settings.php:1467 lib/core/core.php:16
+#: easyReservations_admin_settings.php:303
+#: easyReservations_admin_settings.php:1470 lib/core/core.php:16
 msgid "Premium"
 msgstr "Premium"
 
-#: easyReservations_admin_settings.php:262
+#: easyReservations_admin_settings.php:264
 #, fuzzy
 msgid "minutes"
 msgstr "Minuts"
 
-#: easyReservations_admin_settings.php:262
-msgid "hour"
-msgstr ""
-
-#: easyReservations_admin_settings.php:262
-#: lib/modules/hourlycal/hourlycal.php:198
-#, fuzzy
-msgid "hours"
-msgstr "Hores"
-
-#: easyReservations_admin_settings.php:262
-msgid "days"
-msgstr ""
-
-#: easyReservations_admin_settings.php:265
+#: easyReservations_admin_settings.php:268
 #, fuzzy
 msgid "Support email"
 msgstr "Email de Suport"
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 #, fuzzy
 msgid "Money format"
 msgstr "Format de data"
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 msgid "after"
 msgstr ""
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 msgid "before"
 msgstr ""
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 msgid "Whitespace between price and currency sign"
 msgstr ""
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 msgid "Th. seperator"
 msgstr ""
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 msgid "Dec. seperator"
 msgstr ""
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 msgid "show decimals"
 msgstr ""
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 #, fuzzy
 msgid "round"
 msgstr "Preu base"
 
-#: easyReservations_admin_settings.php:266
+#: easyReservations_admin_settings.php:269
 #, fuzzy
 msgid "Example"
 msgstr "simple"
 
-#: easyReservations_admin_settings.php:267
+#: easyReservations_admin_settings.php:270
 msgid "Date format"
 msgstr "Format de data"
 
-#: easyReservations_admin_settings.php:268
+#: easyReservations_admin_settings.php:271
 msgid ""
 "Enable display of time and that the time gets used to calculate the billing "
 "units instead of only the date"
 msgstr ""
 
-#: easyReservations_admin_settings.php:269
+#: easyReservations_admin_settings.php:272
 msgid "Admin Style"
 msgstr "Estil Admin"
 
-#: easyReservations_admin_settings.php:270
+#: easyReservations_admin_settings.php:273
 msgid "Merge resources"
 msgstr "Combinar instal·lacions"
 
-#: easyReservations_admin_settings.php:270
+#: easyReservations_admin_settings.php:273
 #, fuzzy, php-format
 msgid ""
 "Only allow %s reservations at the same time in all resources regardless of "
@@ -1466,49 +1424,49 @@ msgstr ""
 "Comprovar la disponibilitat de totes les instal·lacions amb máximas reserves "
 "%s al mateix temps, independientemente de la instal·lació"
 
-#: easyReservations_admin_settings.php:271
+#: easyReservations_admin_settings.php:274
 msgid "Block time"
 msgstr ""
 
-#: easyReservations_admin_settings.php:271
+#: easyReservations_admin_settings.php:274
 msgid "Block"
 msgstr ""
 
-#: easyReservations_admin_settings.php:271
+#: easyReservations_admin_settings.php:274
 msgid "before and"
 msgstr ""
 
-#: easyReservations_admin_settings.php:271
+#: easyReservations_admin_settings.php:274
 msgid "after reservations"
 msgstr "Nove reserves"
 
-#: easyReservations_admin_settings.php:272
+#: easyReservations_admin_settings.php:275
 msgid "Tutorial"
 msgstr "Tutorial"
 
-#: easyReservations_admin_settings.php:272
+#: easyReservations_admin_settings.php:275
 msgid "Enable tutorial mode"
 msgstr "Habilitar mode tutorial"
 
-#: easyReservations_admin_settings.php:272
-#: easyReservations_admin_settings.php:1104
+#: easyReservations_admin_settings.php:275
+#: easyReservations_admin_settings.php:1107
 msgid "Reset"
 msgstr "Reinicialitzar"
 
-#: easyReservations_admin_settings.php:273
+#: easyReservations_admin_settings.php:276
 msgid "Uninstall"
 msgstr "Desinstal·lar"
 
-#: easyReservations_admin_settings.php:273
+#: easyReservations_admin_settings.php:276
 msgid "Delete settings, reservations and resources"
 msgstr "Eliminar configuració, reserves i instal·lacions"
 
-#: easyReservations_admin_settings.php:276
+#: easyReservations_admin_settings.php:279
 #, fuzzy
 msgid "Important guests"
 msgstr "Clients Importants"
 
-#: easyReservations_admin_settings.php:276
+#: easyReservations_admin_settings.php:279
 #, fuzzy
 msgid ""
 "Enter emails of important guests; saperated by comma. Reservations with this "
@@ -1517,756 +1475,747 @@ msgstr ""
 "Escrigui els emails dels clients importants, separats per comes. Les "
 "reserves amb aquests emails seran destacades."
 
-#: easyReservations_admin_settings.php:277
+#: easyReservations_admin_settings.php:280
 msgid "Execute scripts"
 msgstr ""
 
-#: easyReservations_admin_settings.php:277
+#: easyReservations_admin_settings.php:280
 #, fuzzy
 msgid "After successful reservation."
 msgstr "després del envío satisfactorio"
 
-#: easyReservations_admin_settings.php:278
+#: easyReservations_admin_settings.php:281
 #, fuzzy
 msgid "General Settings"
 msgstr "Configuració d'email"
 
-#: easyReservations_admin_settings.php:278
-#: easyReservations_admin_settings.php:1362 lib/functions/admin.php:492
+#: easyReservations_admin_settings.php:281
+#: easyReservations_admin_settings.php:1365 lib/functions/admin.php:492
 #: lib/modules/htmlmails/htmlmails.php:150 lib/modules/invoice/invoice.php:781
 #: lib/modules/paypal/creditcards.php:372
-#: lib/modules/paypal/creditcards.php:416
-#: lib/modules/search/attributes.php:128 lib/modules/useredit/useredit.php:372
-#: lib/modules/useredit/useredit.php:460
+#: lib/modules/paypal/creditcards.php:416 lib/modules/search/attributes.php:128
+#: lib/modules/useredit/useredit.php:372 lib/modules/useredit/useredit.php:460
 msgid "Save Changes"
 msgstr "Guardar Canvis"
 
-#: easyReservations_admin_settings.php:294
-#: easyReservations_admin_settings.php:1461
+#: easyReservations_admin_settings.php:297
+#: easyReservations_admin_settings.php:1464
 msgid "Documentation"
 msgstr "Documentació"
 
-#: easyReservations_admin_settings.php:297
-#: easyReservations_admin_settings.php:1464
+#: easyReservations_admin_settings.php:300
+#: easyReservations_admin_settings.php:1467
 msgid "Report bug"
 msgstr "Reportar error"
 
-#: easyReservations_admin_settings.php:303
-#: easyReservations_admin_settings.php:1470
+#: easyReservations_admin_settings.php:306
+#: easyReservations_admin_settings.php:1473
 msgid "Rate the Plugin"
 msgstr "Qualificar el Plugin"
 
-#: easyReservations_admin_settings.php:313
+#: easyReservations_admin_settings.php:316
 msgid "Clean Database"
 msgstr "Netejar Base de Dades"
 
-#: easyReservations_admin_settings.php:313
+#: easyReservations_admin_settings.php:316
 msgid "Clean"
 msgstr "Netejar"
 
-#: easyReservations_admin_settings.php:319
+#: easyReservations_admin_settings.php:322
 #, fuzzy
 msgid "Delete all unapproved old reservations"
 msgstr "Eliminar totes les reserves antigues no aprovades"
 
-#: easyReservations_admin_settings.php:330
+#: easyReservations_admin_settings.php:333
 msgid "Change Permissions"
 msgstr "Canviar Permissos"
 
-#: easyReservations_admin_settings.php:330
+#: easyReservations_admin_settings.php:333
 msgid "Set"
 msgstr "Fixar"
 
-#: easyReservations_admin_settings.php:335 lib/functions/admin.php:20
+#: easyReservations_admin_settings.php:338 lib/functions/admin.php:20
 msgid "Dashboard"
 msgstr "Panell de Control"
 
-#: easyReservations_admin_settings.php:339
-#: easyReservations_admin_settings.php:712
-#: easyReservations_admin_settings.php:1000 lib/functions/admin.php:21
+#: easyReservations_admin_settings.php:342
+#: easyReservations_admin_settings.php:715
+#: easyReservations_admin_settings.php:1003 lib/functions/admin.php:21
 msgid "Resources"
 msgstr "Instal·lacions"
 
-#: easyReservations_admin_settings.php:343 lib/core/core.php:217
+#: easyReservations_admin_settings.php:346 lib/core/core.php:217
 #: lib/functions/admin.php:339 lib/modules/statistics/statistics.php:24
 msgid "Statistics"
 msgstr "Estadístiques"
 
-#: easyReservations_admin_settings.php:347 lib/functions/admin.php:23
+#: easyReservations_admin_settings.php:350 lib/functions/admin.php:23
 #: lib/modules/paypal/paypal.php:184 lib/modules/useredit/useredit.php:364
 msgid "Settings"
 msgstr "Configuracions"
 
-#: easyReservations_admin_settings.php:401
-#: easyReservations_admin_settings.php:403
+#: easyReservations_admin_settings.php:404
+#: easyReservations_admin_settings.php:406
 #: js/tinyMCE/tinyMCE_shortcode_add.php:9
 msgid "Standard"
 msgstr "Estàndar"
 
-#: easyReservations_admin_settings.php:425
-#: easyReservations_admin_settings.php:595
-#: easyReservations_admin_settings.php:951
+#: easyReservations_admin_settings.php:428
+#: easyReservations_admin_settings.php:598
+#: easyReservations_admin_settings.php:954
 #: lib/modules/htmlmails/htmlmails.php:116
 #, fuzzy
 msgid "Arrival date"
 msgstr "Data d'arribada "
 
-#: easyReservations_admin_settings.php:426
-#: easyReservations_admin_settings.php:625
-#: easyReservations_admin_settings.php:956
+#: easyReservations_admin_settings.php:429
+#: easyReservations_admin_settings.php:628
+#: easyReservations_admin_settings.php:959
 #, fuzzy
 msgid "Arrival hour"
 msgstr "Hora d'arribada "
 
-#: easyReservations_admin_settings.php:427
-#: easyReservations_admin_settings.php:655
-#: easyReservations_admin_settings.php:961
+#: easyReservations_admin_settings.php:430
+#: easyReservations_admin_settings.php:658
+#: easyReservations_admin_settings.php:964
 #, fuzzy
 msgid "Arrival minute"
 msgstr "Minut d'arribada "
 
-#: easyReservations_admin_settings.php:428
-msgid "Departure Date"
-msgstr "Data de sortida"
-
-#: easyReservations_admin_settings.php:429
-#: easyReservations_admin_settings.php:640
-#: easyReservations_admin_settings.php:976
-#, fuzzy
-msgid "Departure hour"
-msgstr "Hora de sortida"
-
-#: easyReservations_admin_settings.php:430
-#: easyReservations_admin_settings.php:670
-#: easyReservations_admin_settings.php:981
-#, fuzzy
-msgid "Departure minute"
-msgstr "Minut de sortida"
-
 #: easyReservations_admin_settings.php:431
-#: easyReservations_admin_settings.php:685
-#: easyReservations_admin_settings.php:971
-msgid "Billing units"
-msgstr ""
-
-#: easyReservations_admin_settings.php:469
-#: easyReservations_admin_settings.php:599
-#: easyReservations_admin_settings.php:614
-#: easyReservations_admin_settings.php:789
-#: easyReservations_admin_settings.php:804
-#: easyReservations_admin_settings.php:897
-#: easyReservations_admin_settings.php:1246 lib/modules/lang/lang.php:112
-msgid "Value"
-msgstr "Valor"
-
-#: easyReservations_admin_settings.php:497
-#, fuzzy
-msgid "Display featured image"
-msgstr "Mostrar preu"
-
-#: easyReservations_admin_settings.php:498
-#: js/tinyMCE/tinyMCE_shortcode_add.php:195
-#: lib/modules/hourlycal/hourlycal.php:193 lib/modules/search/search.php:29
-#: lib/modules/search/search.php:50
-msgid "Width"
-msgstr "Ample"
-
-#: easyReservations_admin_settings.php:499 lib/modules/search/search.php:50
-msgid "Height"
-msgstr "Alçada"
-
-#: easyReservations_admin_settings.php:507
-#, fuzzy
-msgid "Display content with"
-msgstr "Mostrar Errors"
-
-#: easyReservations_admin_settings.php:507
-#: easyReservations_admin_settings.php:515
-msgid "characters"
-msgstr ""
-
-#: easyReservations_admin_settings.php:515
-#, fuzzy
-msgid "Display excerpt with"
-msgstr "Mostrar preu"
-
-#: easyReservations_admin_settings.php:530
-msgid "Required"
-msgstr "Requerit"
-
-#: easyReservations_admin_settings.php:539
-#, fuzzy
-msgid "Price per billing unit"
-msgstr "Preu per nit"
-
-#: easyReservations_admin_settings.php:557
-#: js/tinyMCE/tinyMCE_shortcode_add.php:127
-#: js/tinyMCE/tinyMCE_shortcode_add.php:187 lib/modules/search/search.php:21
-msgid "Style"
-msgstr "Estil"
-
-#: easyReservations_admin_settings.php:565
-msgid "Max-length"
-msgstr ""
-
-#: easyReservations_admin_settings.php:571
-#, fuzzy
-msgid "Disabled"
-msgstr "Editable"
-
-#: easyReservations_admin_settings.php:577
-#, fuzzy
-msgid "Errors"
-msgstr "Missatge d'error"
-
-#: easyReservations_admin_settings.php:578
-msgid ""
-"Shows the warning messages in form. Is required for the multiple "
-"reservations form function."
-msgstr ""
-
-#: easyReservations_admin_settings.php:586
-#, fuzzy
-msgid "Message"
-msgstr "Missatge de l'Administrador"
-
-#: easyReservations_admin_settings.php:596
-#, fuzzy
-msgid "Field with datepicker for the arrival date. Is required in any form."
-msgstr "Escrigui en la data d'arribada, la data que vol corretgir"
-
-#: easyReservations_admin_settings.php:610
-#: easyReservations_admin_settings.php:966
+#: easyReservations_admin_settings.php:613
+#: easyReservations_admin_settings.php:969
 #: lib/modules/htmlmails/htmlmails.php:117
 #, fuzzy
 msgid "Departure date"
 msgstr "Data de sortida"
 
-#: easyReservations_admin_settings.php:611
+#: easyReservations_admin_settings.php:432
+#: easyReservations_admin_settings.php:643
+#: easyReservations_admin_settings.php:979
+#, fuzzy
+msgid "Departure hour"
+msgstr "Hora de sortida"
+
+#: easyReservations_admin_settings.php:433
+#: easyReservations_admin_settings.php:673
+#: easyReservations_admin_settings.php:984
+#, fuzzy
+msgid "Departure minute"
+msgstr "Minut de sortida"
+
+#: easyReservations_admin_settings.php:434
+#: easyReservations_admin_settings.php:688
+#: easyReservations_admin_settings.php:974
+msgid "Billing units"
+msgstr ""
+
+#: easyReservations_admin_settings.php:472
+#: easyReservations_admin_settings.php:602
+#: easyReservations_admin_settings.php:617
+#: easyReservations_admin_settings.php:792
+#: easyReservations_admin_settings.php:807
+#: easyReservations_admin_settings.php:900
+#: easyReservations_admin_settings.php:1249 lib/modules/lang/lang.php:112
+msgid "Value"
+msgstr "Valor"
+
+#: easyReservations_admin_settings.php:500
+#, fuzzy
+msgid "Display featured image"
+msgstr "Mostrar preu"
+
+#: easyReservations_admin_settings.php:501
+#: js/tinyMCE/tinyMCE_shortcode_add.php:195
+#: lib/modules/hourlycal/hourlycal.php:194 lib/modules/search/search.php:29
+#: lib/modules/search/search.php:50
+msgid "Width"
+msgstr "Ample"
+
+#: easyReservations_admin_settings.php:502 lib/modules/search/search.php:50
+msgid "Height"
+msgstr "Alçada"
+
+#: easyReservations_admin_settings.php:510
+#, fuzzy
+msgid "Display content with"
+msgstr "Mostrar Errors"
+
+#: easyReservations_admin_settings.php:510
+#: easyReservations_admin_settings.php:518
+msgid "characters"
+msgstr ""
+
+#: easyReservations_admin_settings.php:518
+#, fuzzy
+msgid "Display excerpt with"
+msgstr "Mostrar preu"
+
+#: easyReservations_admin_settings.php:533
+msgid "Required"
+msgstr "Requerit"
+
+#: easyReservations_admin_settings.php:542
+#, fuzzy
+msgid "Price per billing unit"
+msgstr "Preu per nit"
+
+#: easyReservations_admin_settings.php:560
+#: js/tinyMCE/tinyMCE_shortcode_add.php:127
+#: js/tinyMCE/tinyMCE_shortcode_add.php:187 lib/modules/search/search.php:21
+msgid "Style"
+msgstr "Estil"
+
+#: easyReservations_admin_settings.php:568
+msgid "Max-length"
+msgstr ""
+
+#: easyReservations_admin_settings.php:574
+#, fuzzy
+msgid "Disabled"
+msgstr "Editable"
+
+#: easyReservations_admin_settings.php:580
+#, fuzzy
+msgid "Errors"
+msgstr "Missatge d'error"
+
+#: easyReservations_admin_settings.php:581
+msgid ""
+"Shows the warning messages in form. Is required for the multiple "
+"reservations form function."
+msgstr ""
+
+#: easyReservations_admin_settings.php:589
+#, fuzzy
+msgid "Message"
+msgstr "Missatge de l'Administrador"
+
+#: easyReservations_admin_settings.php:599
+#, fuzzy
+msgid "Field with datepicker for the arrival date. Is required in any form."
+msgstr "Escrigui en la data d'arribada, la data que vol corretgir"
+
+#: easyReservations_admin_settings.php:614
 msgid ""
 "Field with datepicker for the departure date. Can be replaced by billing "
 "units selection or deleted so that every reservation lasts one billing unit."
 msgstr ""
 
-#: easyReservations_admin_settings.php:626
+#: easyReservations_admin_settings.php:629
 msgid ""
 "Select for arrival hour. Can be replaced by a hidden field and defaults to "
 "12:00 if not in form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:629
-#: easyReservations_admin_settings.php:644
-#: easyReservations_admin_settings.php:659
-#: easyReservations_admin_settings.php:674
-#: easyReservations_admin_settings.php:701
-#: easyReservations_admin_settings.php:716
-#: easyReservations_admin_settings.php:747
-#: easyReservations_admin_settings.php:774
-#: easyReservations_admin_settings.php:819
+#: easyReservations_admin_settings.php:632
+#: easyReservations_admin_settings.php:647
+#: easyReservations_admin_settings.php:662
+#: easyReservations_admin_settings.php:677
+#: easyReservations_admin_settings.php:704
+#: easyReservations_admin_settings.php:719
+#: easyReservations_admin_settings.php:750
+#: easyReservations_admin_settings.php:777
+#: easyReservations_admin_settings.php:822
 msgid "Selected"
 msgstr "Seleccionat"
 
-#: easyReservations_admin_settings.php:641
+#: easyReservations_admin_settings.php:644
 msgid ""
 "Select for departure hour. Can be replaced by a hidden field and defaults to "
 "12:00 if not in form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:656
+#: easyReservations_admin_settings.php:659
 #, fuzzy
 msgid "Select for arrival minute."
 msgstr "Seleccionar plantilla de formulari"
 
-#: easyReservations_admin_settings.php:671
+#: easyReservations_admin_settings.php:674
 #, fuzzy
 msgid "Select for departure minute."
 msgstr "Seleccionar plantilla de formulari"
 
-#: easyReservations_admin_settings.php:686
+#: easyReservations_admin_settings.php:689
 msgid ""
 "Select of billing units to define the length of stay. Can be replaced by "
 "depature date field or defaults to one billing unit if not in form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:713
+#: easyReservations_admin_settings.php:716
 msgid ""
 "Select of resources. Is required and can only be replaced by hidden field. "
 "You can exclude resources with comma saperated IDs."
 msgstr ""
 
-#: easyReservations_admin_settings.php:721 lib/modules/search/search.php:41
+#: easyReservations_admin_settings.php:724 lib/modules/search/search.php:41
 msgid "Exclude"
 msgstr "Excloure"
 
-#: easyReservations_admin_settings.php:732
+#: easyReservations_admin_settings.php:735
 msgid "Select of adults. Is required and can only be replaced by hidden field."
 msgstr ""
 
-#: easyReservations_admin_settings.php:758
+#: easyReservations_admin_settings.php:761
 #: lib/modules/useredit/useredit.php:789
 msgid "Children's"
 msgstr "Nens"
 
-#: easyReservations_admin_settings.php:759
+#: easyReservations_admin_settings.php:762
 msgid "Select of children's. Can be replaced by hidden field or deleted."
 msgstr ""
 
-#: easyReservations_admin_settings.php:786
+#: easyReservations_admin_settings.php:789
 msgid "Text field for name. Is required in any form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:801
-#: easyReservations_admin_settings.php:816
-#: easyReservations_admin_settings.php:867
+#: easyReservations_admin_settings.php:804
+#: easyReservations_admin_settings.php:819
+#: easyReservations_admin_settings.php:870
 msgid "Text field for email. Is required in any form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:832
+#: easyReservations_admin_settings.php:835
 msgid ""
 "Date and information fields can be replaced by hidden fields to force the "
 "selection without the guest choosing or seeing it. They are helpful for "
 "special offers or forms for just one resource."
 msgstr ""
 
-#: easyReservations_admin_settings.php:836
-#: easyReservations_admin_settings.php:1051
+#: easyReservations_admin_settings.php:839
+#: easyReservations_admin_settings.php:1054
 #, fuzzy
 msgid "Resources infobox"
 msgstr "Instal·lacions"
 
-#: easyReservations_admin_settings.php:837
+#: easyReservations_admin_settings.php:840
 msgid ""
 "Shows the information title, image, content and excerpt of the currently "
 "selected resource."
 msgstr ""
 
-#: easyReservations_admin_settings.php:841
+#: easyReservations_admin_settings.php:844
 msgid "Size"
 msgstr ""
 
-#: easyReservations_admin_settings.php:843
+#: easyReservations_admin_settings.php:846
 #, fuzzy
 msgid "Big"
 msgstr "Facturació diaria"
 
-#: easyReservations_admin_settings.php:843
+#: easyReservations_admin_settings.php:846
 msgid "Medium"
 msgstr ""
 
-#: easyReservations_admin_settings.php:847
+#: easyReservations_admin_settings.php:850
 #, fuzzy
 msgid "Featured image"
 msgstr "Foto de la instal·lació"
 
-#: easyReservations_admin_settings.php:851
+#: easyReservations_admin_settings.php:854
 #, fuzzy
 msgid "Show title"
 msgstr "Mostrar preu"
 
-#: easyReservations_admin_settings.php:856
+#: easyReservations_admin_settings.php:859
 msgid "Content"
 msgstr "Contingut"
 
-#: easyReservations_admin_settings.php:866
-#: easyReservations_admin_settings.php:1056
+#: easyReservations_admin_settings.php:869
+#: easyReservations_admin_settings.php:1059
 #: lib/modules/useredit/useredit.php:874
 msgid "Captcha"
 msgstr "Captcha"
 
-#: easyReservations_admin_settings.php:870
+#: easyReservations_admin_settings.php:873
 msgid "Color of code"
 msgstr ""
 
-#: easyReservations_admin_settings.php:872
+#: easyReservations_admin_settings.php:875
 msgid "Black"
 msgstr ""
 
-#: easyReservations_admin_settings.php:872
+#: easyReservations_admin_settings.php:875
 #: js/tinyMCE/tinyMCE_shortcode_add.php:128
 msgid "White"
 msgstr "Blanc"
 
-#: easyReservations_admin_settings.php:880
+#: easyReservations_admin_settings.php:883
 #, fuzzy
 msgid "display price"
 msgstr "Mostrar preu"
 
-#: easyReservations_admin_settings.php:881
+#: easyReservations_admin_settings.php:884
 msgid "Shows the price as of selections."
 msgstr ""
 
-#: easyReservations_admin_settings.php:884
+#: easyReservations_admin_settings.php:887
 #, fuzzy
 msgid "Text before price"
 msgstr "Preu base"
 
-#: easyReservations_admin_settings.php:893
-#: easyReservations_admin_settings.php:1103
-#: easyReservations_admin_settings.php:1230
+#: easyReservations_admin_settings.php:896
+#: easyReservations_admin_settings.php:1106
+#: easyReservations_admin_settings.php:1233
 #: js/tinyMCE/tinyMCE_shortcode_add.php:154 lib/modules/search/search.php:61
 #: lib/modules/useredit/useredit.php:849 lib/modules/useredit/useredit.php:876
 msgid "Submit"
 msgstr "Enviar"
 
-#: easyReservations_admin_settings.php:894
+#: easyReservations_admin_settings.php:897
 msgid "Button to submit the form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:907
+#: easyReservations_admin_settings.php:910
 #, php-format
 msgid ""
 "Can be any form element, can have an impact on the price and are used to get "
 "more information. Define them %s first"
 msgstr ""
 
-#: easyReservations_admin_settings.php:910
-#: easyReservations_admin_settings.php:961
-#: easyReservations_admin_settings.php:981
+#: easyReservations_admin_settings.php:913
+#: easyReservations_admin_settings.php:964
+#: easyReservations_admin_settings.php:984
 #, fuzzy
 msgid "Select field"
 msgstr "Seleccionat"
 
-#: easyReservations_admin_settings.php:938
+#: easyReservations_admin_settings.php:941
 #, fuzzy
 msgid "Date fields"
 msgstr "camps de preu"
 
-#: easyReservations_admin_settings.php:945
-#: easyReservations_admin_settings.php:994
-#: easyReservations_admin_settings.php:1105
-#: easyReservations_admin_settings.php:1370
+#: easyReservations_admin_settings.php:948
+#: easyReservations_admin_settings.php:997
+#: easyReservations_admin_settings.php:1108
+#: easyReservations_admin_settings.php:1373
 #, fuzzy
 msgid "Default"
 msgstr "Formulari per defecte"
 
-#: easyReservations_admin_settings.php:951
-#: easyReservations_admin_settings.php:966
+#: easyReservations_admin_settings.php:954
+#: easyReservations_admin_settings.php:969
 msgid "Text field with datepicker"
 msgstr "Camp de texte amb Selecció de data"
 
-#: easyReservations_admin_settings.php:956
-#: easyReservations_admin_settings.php:976
+#: easyReservations_admin_settings.php:959
+#: easyReservations_admin_settings.php:979
 msgid "Select field as of the time pattern selection"
 msgstr ""
 
-#: easyReservations_admin_settings.php:971
+#: easyReservations_admin_settings.php:974
 msgid "Select field to choose length of stay"
 msgstr ""
 
-#: easyReservations_admin_settings.php:987
+#: easyReservations_admin_settings.php:990
 #, fuzzy
 msgid "Information fields"
 msgstr "Informacions"
 
-#: easyReservations_admin_settings.php:1000
+#: easyReservations_admin_settings.php:1003
 #, fuzzy
 msgid "Select of resource"
 msgstr "Seleccioni una instal·lació"
 
-#: easyReservations_admin_settings.php:1005
+#: easyReservations_admin_settings.php:1008
 #, fuzzy
 msgid "Select field for adults"
 msgstr "Selecció de països"
 
-#: easyReservations_admin_settings.php:1010
+#: easyReservations_admin_settings.php:1013
 msgid "Select field for children's"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1015
+#: easyReservations_admin_settings.php:1018
 #, fuzzy
 msgid "Text field for name"
 msgstr "Camp de texte"
 
-#: easyReservations_admin_settings.php:1020
+#: easyReservations_admin_settings.php:1023
 #, fuzzy
 msgid "Text field for mail"
 msgstr "Camp de texte"
 
-#: easyReservations_admin_settings.php:1025
+#: easyReservations_admin_settings.php:1028
 #, fuzzy
 msgid "Select field of country's"
 msgstr "Selecció de països"
 
-#: easyReservations_admin_settings.php:1031
+#: easyReservations_admin_settings.php:1034
 #, fuzzy
 msgid "Special fields"
 msgstr "camps de preu"
 
-#: easyReservations_admin_settings.php:1043
+#: easyReservations_admin_settings.php:1046
 #, fuzzy
 msgid "Fix information and hide from guest"
 msgstr "per fixar informació al formulari i amagar-ho als clients"
 
-#: easyReservations_admin_settings.php:1047
+#: easyReservations_admin_settings.php:1050
 msgid "Custom form elements to get more information"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1051
+#: easyReservations_admin_settings.php:1054
 msgid "Displays information of currently selected resource"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1056
+#: easyReservations_admin_settings.php:1059
 msgid "To verify only humans use the form"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1060
+#: easyReservations_admin_settings.php:1063
 #: js/tinyMCE/tinyMCE_shortcode_add.php:165
 #: lib/modules/useredit/useredit.php:911
 msgid "Show price"
 msgstr "Mostrar preu"
 
-#: easyReservations_admin_settings.php:1060
+#: easyReservations_admin_settings.php:1063
 #, fuzzy
 msgid "Display price live"
 msgstr "Mostrar preu"
 
-#: easyReservations_admin_settings.php:1064
+#: easyReservations_admin_settings.php:1067
 #, fuzzy
 msgid "Error"
 msgstr "Títol d'error"
 
-#: easyReservations_admin_settings.php:1064
+#: easyReservations_admin_settings.php:1067
 #, fuzzy
 msgid "Displays errors"
 msgstr "Mostrar Errors"
 
-#: easyReservations_admin_settings.php:1068
+#: easyReservations_admin_settings.php:1071
 #, fuzzy
 msgid "Submit button"
 msgstr "Butó d'enviar:"
 
-#: easyReservations_admin_settings.php:1068
+#: easyReservations_admin_settings.php:1071
 msgid "Button to submit the form"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1073
+#: easyReservations_admin_settings.php:1076
 #, fuzzy
 msgid "Format"
 msgstr "Formulari"
 
-#: easyReservations_admin_settings.php:1078
+#: easyReservations_admin_settings.php:1081
 msgid "Label"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1078
+#: easyReservations_admin_settings.php:1081
 msgid "Used for description of tags. Should be before the tag."
 msgstr ""
 
-#: easyReservations_admin_settings.php:1081
+#: easyReservations_admin_settings.php:1084
 msgid "Sub-label"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1081
+#: easyReservations_admin_settings.php:1084
 msgid "Small sub-label. Should be used inside labels."
 msgstr ""
 
-#: easyReservations_admin_settings.php:1084
+#: easyReservations_admin_settings.php:1087
 msgid "Row"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1084
+#: easyReservations_admin_settings.php:1087
 msgid ""
 "To use multiple elements in one row. It may be nesecarry to define their "
 "width's."
 msgstr ""
 
-#: easyReservations_admin_settings.php:1087
+#: easyReservations_admin_settings.php:1090
 msgid "Bold"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1087
+#: easyReservations_admin_settings.php:1090
 #, fuzzy
 msgid "Bold text"
 msgstr "texte pla"
 
-#: easyReservations_admin_settings.php:1090
+#: easyReservations_admin_settings.php:1093
 msgid "Italic"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1090
+#: easyReservations_admin_settings.php:1093
 #, fuzzy
 msgid "Italic text"
 msgstr "texte pla"
 
-#: easyReservations_admin_settings.php:1093
+#: easyReservations_admin_settings.php:1096
 msgid "Headline"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1093
+#: easyReservations_admin_settings.php:1096
 msgid "Big headline."
 msgstr ""
 
-#: easyReservations_admin_settings.php:1096
+#: easyReservations_admin_settings.php:1099
 msgid "Sub-headline"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1096
+#: easyReservations_admin_settings.php:1099
 msgid "Smaller headline to divide the form."
 msgstr ""
 
-#: easyReservations_admin_settings.php:1168
+#: easyReservations_admin_settings.php:1171
 #, fuzzy
 msgid "Custom field edited"
 msgstr "Els camps personalitzats s'han editat"
 
-#: easyReservations_admin_settings.php:1173
+#: easyReservations_admin_settings.php:1176
 #, fuzzy
 msgid "Added custom field"
 msgstr "Afegir camp personalitzat"
 
-#: easyReservations_admin_settings.php:1179
+#: easyReservations_admin_settings.php:1182
 #, fuzzy
 msgid "Custom field deleted"
 msgstr "preu personalizat eliminat"
 
-#: easyReservations_admin_settings.php:1193
+#: easyReservations_admin_settings.php:1196
 #, fuzzy
 msgid "Add and edit custom fields"
 msgstr "Afegir camp personalitzat"
 
-#: easyReservations_admin_settings.php:1208
+#: easyReservations_admin_settings.php:1211
 #, fuzzy
 msgid "Price field"
 msgstr "Camps de preus"
 
-#: easyReservations_admin_settings.php:1212
+#: easyReservations_admin_settings.php:1215
 msgid "Field has influence on price"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1217
+#: easyReservations_admin_settings.php:1220
 #, fuzzy
 msgid "Form Element"
 msgstr "Elements"
 
-#: easyReservations_admin_settings.php:1247
+#: easyReservations_admin_settings.php:1250
 msgid "Else"
 msgstr ""
 
-#: easyReservations_admin_settings.php:1281
+#: easyReservations_admin_settings.php:1272
+msgid "condition"
+msgid_plural "conditions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: easyReservations_admin_settings.php:1284
 #, fuzzy
 msgid "No custom fields defined"
 msgstr "Els camps personalitzats s'han editat"
 
-#: easyReservations_admin_settings.php:1361
-#: lib/modules/paypal/creditcards.php:391 overview.php:162
+#: easyReservations_admin_settings.php:1364
+#: lib/modules/paypal/creditcards.php:391 overview.php:163
 msgid "Active"
 msgstr "Actiu"
 
-#: easyReservations_admin_settings.php:1369
+#: easyReservations_admin_settings.php:1372
 msgid "Subject"
 msgstr "Assumpte"
 
-#: easyReservations_admin_settings.php:1387
+#: easyReservations_admin_settings.php:1390
 msgid "Tags"
 msgstr "Etiquetes"
 
-#: easyReservations_admin_settings.php:1394
+#: easyReservations_admin_settings.php:1397
 msgid "wordwrap"
 msgstr "ajust de línia"
 
-#: easyReservations_admin_settings.php:1395
+#: easyReservations_admin_settings.php:1398
 msgid "message from admin"
 msgstr "Missatge de l'administrador"
 
-#: easyReservations_admin_settings.php:1397
-#: lib/modules/invoice/invoice.php:585
+#: easyReservations_admin_settings.php:1400 lib/modules/invoice/invoice.php:585
 msgid "name"
 msgstr "nom"
 
-#: easyReservations_admin_settings.php:1398
-#: lib/modules/invoice/invoice.php:586
+#: easyReservations_admin_settings.php:1401 lib/modules/invoice/invoice.php:586
 msgid "email"
 msgstr "email"
 
-#: easyReservations_admin_settings.php:1399
-#: lib/modules/invoice/invoice.php:582
+#: easyReservations_admin_settings.php:1402 lib/modules/invoice/invoice.php:582
 msgid "arrival date"
 msgstr "Data d'arribada "
 
-#: easyReservations_admin_settings.php:1400
-#: lib/modules/invoice/invoice.php:583
+#: easyReservations_admin_settings.php:1403 lib/modules/invoice/invoice.php:583
 msgid "departure date"
 msgstr "Data de sortida"
 
-#: easyReservations_admin_settings.php:1401
-#: lib/modules/invoice/invoice.php:584
+#: easyReservations_admin_settings.php:1404 lib/modules/invoice/invoice.php:584
 #, fuzzy
 msgid "amount of billing units"
 msgstr "quantitat d'adults"
 
-#: easyReservations_admin_settings.php:1402
-#: lib/modules/invoice/invoice.php:589
+#: easyReservations_admin_settings.php:1405 lib/modules/invoice/invoice.php:589
 #, fuzzy
 msgid "amount of adults and children"
 msgstr "quantitat d'adults"
 
-#: easyReservations_admin_settings.php:1403
-#: lib/modules/invoice/invoice.php:590
+#: easyReservations_admin_settings.php:1406 lib/modules/invoice/invoice.php:590
 msgid "amount of adults"
 msgstr "quantitat d'adults"
 
-#: easyReservations_admin_settings.php:1404
-#: lib/modules/invoice/invoice.php:591
+#: easyReservations_admin_settings.php:1407 lib/modules/invoice/invoice.php:591
 #, fuzzy
 msgid "amount of children"
 msgstr "Quantitat de nens"
 
-#: easyReservations_admin_settings.php:1405
-#: lib/modules/invoice/invoice.php:592
+#: easyReservations_admin_settings.php:1408 lib/modules/invoice/invoice.php:592
 msgid "country of guest"
 msgstr "Estat de residencia del client"
 
-#: easyReservations_admin_settings.php:1406
+#: easyReservations_admin_settings.php:1409
 msgid "name of resource"
 msgstr "nom de la instal·lació"
 
-#: easyReservations_admin_settings.php:1407
+#: easyReservations_admin_settings.php:1410
 msgid "name of resource number"
 msgstr "nom del número a la instal·lació"
 
-#: easyReservations_admin_settings.php:1408
-#: lib/modules/invoice/invoice.php:594
+#: easyReservations_admin_settings.php:1411 lib/modules/invoice/invoice.php:594
 #, fuzzy
 msgid "price of reservation"
 msgstr "ID de la Reserva"
 
-#: easyReservations_admin_settings.php:1409
-#: lib/modules/invoice/invoice.php:595
+#: easyReservations_admin_settings.php:1412 lib/modules/invoice/invoice.php:595
 #, fuzzy
 msgid "paid amount"
 msgstr "mostrar quantitat pagada"
 
-#: easyReservations_admin_settings.php:1410
+#: easyReservations_admin_settings.php:1413
 msgid "custom fields"
 msgstr "camps personalitzats"
 
-#: easyReservations_admin_settings.php:1411
+#: easyReservations_admin_settings.php:1414
 msgid "show changes after edits"
 msgstr "mostrar canvis després d'editar"
 
-#: easyReservations_admin_settings.php:1412
+#: easyReservations_admin_settings.php:1415
 #, fuzzy
 msgid "link to user control panel"
 msgstr "Panell de Control de l'Usuari"
 
-#: easyReservations_admin_settings.php:1429 lib/core/core.php:324
+#: easyReservations_admin_settings.php:1432 lib/core/core.php:324
 #: lib/modules/htmlmails/htmlmails.php:134
 msgid "Changelog"
 msgstr "Canvis"
 
-#: easyReservations_admin_settings.php:1473
+#: easyReservations_admin_settings.php:1476
 msgid "Chrome Extension"
 msgstr "Chrome Extension"
 
-#: easyReservations_admin_settings.php:1480
+#: easyReservations_admin_settings.php:1483
 msgid "Latest News"
 msgstr "Últimes Notícies"
 
-#: easyReservations_form_shortcode.php:22 lib/modules/search/search.php:208
+#: easyReservations_form_shortcode.php:23 lib/modules/search/search.php:208
 msgid "Room"
 msgstr "Habitació"
 
-#: easyReservations_form_shortcode.php:23
+#: easyReservations_form_shortcode.php:24
 #: js/tinyMCE/tinyMCE_shortcode_add.php:99 lib/modules/paypal/paypal.php:197
 #: lib/modules/paypal/paypal.php:213 lib/modules/paypal/paypal.php:228
 #: lib/modules/paypal/paypal.php:245 lib/modules/paypal/paypal.php:258
@@ -2274,24 +2223,23 @@ msgstr "Habitació"
 msgid "Cancel"
 msgstr "Cancel·lar"
 
-#: easyReservations_form_shortcode.php:24
-#: lib/modules/useredit/useredit.php:487
+#: easyReservations_form_shortcode.php:25 lib/modules/useredit/useredit.php:487
 msgid "Your reservation is complete"
 msgstr "La seva reserva està feta"
 
-#: easyReservations_form_shortcode.php:25
+#: easyReservations_form_shortcode.php:26
 msgid "Your reservation was sent"
 msgstr "La seva reserva s'ha enviat"
 
-#: easyReservations_form_shortcode.php:26
+#: easyReservations_form_shortcode.php:27
 msgid "Reservation was validated succesfully"
 msgstr "Reserva d'instal·lacions"
 
-#: easyReservations_form_shortcode.php:432
+#: easyReservations_form_shortcode.php:438
 msgid "Add another reservation"
 msgstr "Afegir reserva"
 
-#: easyReservations_form_shortcode.php:433
+#: easyReservations_form_shortcode.php:439
 msgid "Submit all reservations"
 msgstr "Enviar totes les reserves totals"
 
@@ -2305,7 +2253,7 @@ msgid "easyReservations Shortcode Creator"
 msgstr "easyReservations Shortcodes"
 
 #: js/tinyMCE/tinyMCE_shortcode_add.php:77
-#: lib/modules/hourlycal/hourlycal.php:206 lib/modules/paypal/paypal.php:200
+#: lib/modules/hourlycal/hourlycal.php:207 lib/modules/paypal/paypal.php:200
 #: lib/modules/paypal/paypal.php:214 lib/modules/paypal/paypal.php:231
 #: lib/modules/paypal/paypal.php:261 lib/modules/paypal/paypal.php:278
 #: lib/modules/search/attributes.php:122
@@ -2350,7 +2298,7 @@ msgstr "Insertar"
 
 #: js/tinyMCE/tinyMCE_shortcode_add.php:113
 #: js/tinyMCE/tinyMCE_shortcode_add.php:115
-#: lib/modules/hourlycal/hourlycal.php:182 lib/modules/search/search.php:18
+#: lib/modules/hourlycal/hourlycal.php:183 lib/modules/search/search.php:18
 msgid "Custom Style"
 msgstr "Estil personalitzat"
 
@@ -2457,7 +2405,7 @@ msgid "Only add one form per page or post"
 msgstr "Només afegir un formulari per pàgina o entrada"
 
 #: js/tinyMCE/tinyMCE_shortcode_add.php:184
-#: lib/modules/hourlycal/hourlycal.php:186
+#: lib/modules/hourlycal/hourlycal.php:187
 msgid "Select default resource"
 msgstr "Seleccioni instal·lació per defecte"
 
@@ -2474,12 +2422,12 @@ msgid "Select calendar style"
 msgstr "Seleccioni un estil de calendari"
 
 #: js/tinyMCE/tinyMCE_shortcode_add.php:192
-#: lib/modules/hourlycal/hourlycal.php:190
+#: lib/modules/hourlycal/hourlycal.php:191
 msgid "no"
 msgstr "no"
 
 #: js/tinyMCE/tinyMCE_shortcode_add.php:192
-#: lib/modules/hourlycal/hourlycal.php:190
+#: lib/modules/hourlycal/hourlycal.php:191
 msgid "Show price in calendar"
 msgstr "Mostrar preu en calendari"
 
@@ -2512,137 +2460,136 @@ msgstr ""
 msgid "Only add the calendar once per page or post"
 msgstr "Només afegir el calendari una cop per pàgina o entrada"
 
-#: lib/classes/reservation.class.php:857
+#: lib/classes/reservation.class.php:862
 #, fuzzy
 msgid "Please enter your name"
 msgstr "Si us plau, introdueixi un nom correcte."
 
-#: lib/classes/reservation.class.php:863
+#: lib/classes/reservation.class.php:868
 #, fuzzy
 msgid "Please enter a correct email"
 msgstr "Si us plau, introdueixi un email correcte"
 
-#: lib/classes/reservation.class.php:868
+#: lib/classes/reservation.class.php:873
 msgid "Please enter correct dates"
 msgstr "Si us plau, introdueixi les dates correctes"
 
-#: lib/classes/reservation.class.php:874
+#: lib/classes/reservation.class.php:879
 msgid "The departure date has to be after the arrival date"
 msgstr "La data de sortida ha de ser posterior a la d'arribada "
 
-#: lib/classes/reservation.class.php:880
+#: lib/classes/reservation.class.php:885
 msgid "Adults has to be a number at least one"
 msgstr "Adults ha de ser un número de almenys 1"
 
-#: lib/classes/reservation.class.php:886
+#: lib/classes/reservation.class.php:891
 msgid "Children's has to be a number"
 msgstr "nens ha de ser un número"
 
-#: lib/classes/reservation.class.php:895 lib/modules/search/search.php:429
+#: lib/classes/reservation.class.php:900 lib/modules/search/search.php:429
 msgid "Not available at"
 msgstr "No disponible en"
 
-#: lib/classes/reservation.class.php:896 lib/classes/reservation.class.php:897
+#: lib/classes/reservation.class.php:901 lib/classes/reservation.class.php:902
 msgid "Selected time is occupied"
 msgstr "L'hora seleccionada està ocupada"
 
-#: lib/classes/reservation.class.php:911
+#: lib/classes/reservation.class.php:916
 msgid "The arrival date has to be in future"
 msgstr "La data d'arribada ha de ser més endavant"
 
-#: lib/classes/reservation.class.php:952
+#: lib/classes/reservation.class.php:957
 #, php-format
 msgid "At least %1$s persons in %2$s"
 msgstr "Al menys %1$s adults en %2$s"
 
-#: lib/classes/reservation.class.php:959
+#: lib/classes/reservation.class.php:964
 #, php-format
 msgid "Maximum %1$s persons in %2$s"
 msgstr "Màxim %1$s adults en %2$s"
 
-#: lib/classes/reservation.class.php:966
+#: lib/classes/reservation.class.php:971
 #, php-format
 msgid "At least %1$s %2$s in %3$s"
 msgstr "Al menys %1$s %2$s en %3$s"
 
-#: lib/classes/reservation.class.php:973
+#: lib/classes/reservation.class.php:978
 #, php-format
 msgid "Maximum %1$s %2$s in %3$s"
 msgstr "Màxim %1$s %2$s en %3$s"
 
-#: lib/classes/reservation.class.php:985
+#: lib/classes/reservation.class.php:990
 #, php-format
 msgid "Arrival only possible on %s"
 msgstr "La data d'arribada només és possible els %s"
 
-#: lib/classes/reservation.class.php:996
+#: lib/classes/reservation.class.php:1001
 #, php-format
 msgid "Departure only possible on %s"
 msgstr "La data de sortida només és possible els %s"
 
-#: lib/classes/reservation.class.php:1003
+#: lib/classes/reservation.class.php:1008
 #, fuzzy, php-format
 msgid "Arrival only possible from %s"
 msgstr "La data d'arribada només és possible els %s"
 
-#: lib/classes/reservation.class.php:1007
+#: lib/classes/reservation.class.php:1012
 #, fuzzy, php-format
 msgid "Arrival only possible till %s"
 msgstr "La data d'arribada només és possible els %s"
 
-#: lib/classes/reservation.class.php:1013
+#: lib/classes/reservation.class.php:1018
 #, fuzzy, php-format
 msgid "Departure only possible from %s"
 msgstr "La data de sortida només és possible els %s"
 
-#: lib/classes/reservation.class.php:1017
+#: lib/classes/reservation.class.php:1022
 #, fuzzy, php-format
 msgid "Departure only possible till %s"
 msgstr "La data de sortida només és possible els %s"
 
-#: lib/classes/reservation.class.php:1226 lib/functions/both.php:308
+#: lib/classes/reservation.class.php:1229 lib/functions/both.php:309
 msgid "The arrival date was edited"
 msgstr "La data d'arribada ha estat editada"
 
-#: lib/classes/reservation.class.php:1227 lib/functions/both.php:312
+#: lib/classes/reservation.class.php:1230 lib/functions/both.php:313
 msgid "The departure date was edited"
 msgstr "La data de sortida ha estat editada"
 
-#: lib/classes/reservation.class.php:1228 lib/functions/both.php:316
+#: lib/classes/reservation.class.php:1231 lib/functions/both.php:317
 msgid "The name was edited"
 msgstr "El nombre ha estat editat"
 
-#: lib/classes/reservation.class.php:1229 lib/functions/both.php:320
+#: lib/classes/reservation.class.php:1232 lib/functions/both.php:321
 msgid "The email was edited"
 msgstr "El Email ha estat editat"
 
-#: lib/classes/reservation.class.php:1230
+#: lib/classes/reservation.class.php:1233
 msgid "The amount of adults was edited"
 msgstr "La quantitat d'adults ha estat editada"
 
-#: lib/classes/reservation.class.php:1231 lib/functions/both.php:328
+#: lib/classes/reservation.class.php:1234 lib/functions/both.php:329
 #, fuzzy
 msgid "The amount of children was edited"
 msgstr "La quantitat de nens ha estat editat"
 
-#: lib/classes/reservation.class.php:1232 lib/functions/both.php:332
+#: lib/classes/reservation.class.php:1235 lib/functions/both.php:333
 msgid "The country was edited"
 msgstr "El país ha estat editat"
 
-#: lib/classes/reservation.class.php:1233
+#: lib/classes/reservation.class.php:1236
 msgid "The resource was edited"
 msgstr "Les instal·lacions s'ha editat"
 
-#: lib/classes/reservation.class.php:1234 lib/functions/both.php:344
+#: lib/classes/reservation.class.php:1237 lib/functions/both.php:345
 msgid "Custom fields got edited"
 msgstr "Els camps personalitzats s'han editat"
 
-#: lib/classes/reservation.class.php:1235
+#: lib/classes/reservation.class.php:1238
 msgid "Prices got edited"
 msgstr "Els preus s'han editat"
 
-#: lib/classes/reservation.class.php:1241
-#: lib/modules/useredit/useredit.php:357
+#: lib/classes/reservation.class.php:1244 lib/modules/useredit/useredit.php:357
 msgid "trashed"
 msgstr "eliminat"
 
@@ -3160,10 +3107,6 @@ msgstr "Preu"
 msgid "paid"
 msgstr "pagat"
 
-#: lib/functions/admin.php:219
-msgid "time"
-msgstr "hora"
-
 #: lib/functions/admin.php:223
 msgid "status"
 msgstr "estatus"
@@ -3198,7 +3141,7 @@ msgstr "Email pel client després que l'administrador editi la reserva"
 msgid "Mail to admin after new reservation"
 msgstr "Emails per nova reserva"
 
-#: lib/functions/admin.php:262 lib/functions/ajax.php:944
+#: lib/functions/admin.php:262 lib/functions/ajax.php:950
 #: lib/modules/invoice/editor.php:24
 msgid "Mail"
 msgstr "Email"
@@ -3249,13 +3192,13 @@ msgstr "reservada"
 msgid "Resource number"
 msgstr "Instal·lació número"
 
-#: lib/functions/admin.php:364 lib/functions/ajax.php:815
-#: lib/functions/ajax.php:856 lib/modules/htmlmails/htmlmails.php:392
+#: lib/functions/admin.php:364 lib/functions/ajax.php:821
+#: lib/functions/ajax.php:862 lib/modules/htmlmails/htmlmails.php:392
 msgid "Custom fields"
 msgstr "Camps personalitzats"
 
-#: lib/functions/admin.php:365 lib/functions/ajax.php:817
-#: lib/functions/ajax.php:858
+#: lib/functions/admin.php:365 lib/functions/ajax.php:823
+#: lib/functions/ajax.php:864
 msgid "Custom prices"
 msgstr "Preus personalitzats"
 
@@ -3283,7 +3226,7 @@ msgstr "Filtrar per estatus"
 msgid "Choose days to show"
 msgstr "Eculli dies a mostrar"
 
-#: lib/functions/admin.php:376 lib/functions/ajax.php:775
+#: lib/functions/admin.php:376 lib/functions/ajax.php:781
 #: lib/modules/search/search.php:37 lib/modules/search/search.php:111
 #: lib/modules/search/search.php:210
 msgid "Search"
@@ -3326,89 +3269,104 @@ msgstr "prev"
 msgid "next"
 msgstr "següent"
 
-#: lib/functions/ajax.php:279
+#: lib/functions/ajax.php:282
 msgid "Please enter the correct captcha"
 msgstr "Escrigui el codi de seguretat correcte"
 
-#: lib/functions/ajax.php:448 lib/functions/ajax.php:459
+#: lib/functions/ajax.php:454 lib/functions/ajax.php:465
 #, php-format
 msgid "%1$s is required"
 msgstr "%1$s és obligatori"
 
-#: lib/functions/ajax.php:466
+#: lib/functions/ajax.php:472
 msgid "Captcha is required"
 msgstr "El codi de seguretat és obligatori"
 
-#: lib/functions/ajax.php:469 lib/functions/ajax.php:477
+#: lib/functions/ajax.php:475 lib/functions/ajax.php:483
 msgid "Enter correct captcha"
 msgstr "Escriure el codi de seguretat correcte"
 
-#: lib/functions/ajax.php:723
+#: lib/functions/ajax.php:729
 msgid "of"
 msgstr "de"
 
-#: lib/functions/ajax.php:736
+#: lib/functions/ajax.php:742
 msgid "Upcoming"
 msgstr ""
 
-#: lib/functions/ajax.php:737 lib/modules/useredit/useredit.php:360
+#: lib/functions/ajax.php:743 lib/modules/useredit/useredit.php:360
 msgid "Current"
 msgstr "Actual"
 
-#: lib/functions/ajax.php:741
+#: lib/functions/ajax.php:747
 msgid "Old"
 msgstr "Antic"
 
-#: lib/functions/ajax.php:742
+#: lib/functions/ajax.php:748
 msgid "Trash"
 msgstr "Paperera"
 
-#: lib/functions/ajax.php:749
+#: lib/functions/ajax.php:755
 msgid "View all statuses"
 msgstr "Veure tots els estats"
 
-#: lib/functions/ajax.php:751
+#: lib/functions/ajax.php:757
 #, fuzzy
 msgid "Show all monthes"
 msgstr "Mostrar mesos"
 
-#: lib/functions/ajax.php:765
+#: lib/functions/ajax.php:771
 msgid "View all Resources"
 msgstr "Veure totes les instal·lacions"
 
-#: lib/functions/ajax.php:941 lib/functions/ajax.php:1004
+#: lib/functions/ajax.php:947 lib/functions/ajax.php:1010
 msgid "Restore"
 msgstr "Restaurar"
 
-#: lib/functions/ajax.php:942 lib/functions/ajax.php:1004
+#: lib/functions/ajax.php:948 lib/functions/ajax.php:1010
 msgid "Delete Permanently"
 msgstr "Esborrar permanentement"
 
-#: lib/functions/ajax.php:948 lib/modules/stream/stream.php:130
+#: lib/functions/ajax.php:954 lib/modules/stream/stream.php:130
 #: lib/modules/useredit/useredit.php:30 lib/modules/useredit/useredit.php:58
 #: lib/modules/useredit/useredit.php:138 lib/modules/useredit/useredit.php:697
 msgid "ago"
 msgstr "enrera"
 
-#: lib/functions/ajax.php:996
+#: lib/functions/ajax.php:1002
 msgid "No Reservations found"
 msgstr ""
 
-#: lib/functions/ajax.php:1004
+#: lib/functions/ajax.php:1010
 msgid "Bulk Actions"
 msgstr "Accions en Bloc"
 
-#: lib/functions/ajax.php:1004
+#: lib/functions/ajax.php:1010
 msgid "Move to Trash"
 msgstr "Moure a la Paperera"
 
-#: lib/functions/ajax.php:1004
+#: lib/functions/ajax.php:1010
 msgid "Apply"
 msgstr "Aplicar"
 
-#: lib/functions/ajax.php:1010
+#: lib/functions/ajax.php:1016
 msgid "Elements"
 msgstr "Elements"
+
+#: lib/functions/both.php:20
+msgctxt "easyReservations"
+msgid "Resources"
+msgstr ""
+
+#: lib/functions/both.php:21
+msgctxt "easyReservations"
+msgid "Resource"
+msgstr ""
+
+#: lib/functions/both.php:22
+msgctxt "easyReservations"
+msgid "Add Resource"
+msgstr ""
 
 #: lib/functions/both.php:23
 msgid "Add New Resource"
@@ -3430,102 +3388,135 @@ msgstr "Totes les instal·lacions"
 msgid "View Resource"
 msgstr "Veure instal·lació"
 
-#: lib/functions/both.php:324
+#: lib/functions/both.php:269
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/functions/both.php:271
+#, fuzzy
+msgid "day"
+msgid_plural "days"
+msgstr[0] "dia"
+msgstr[1] "dia"
+
+#: lib/functions/both.php:273
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/functions/both.php:275
+#, fuzzy
+msgid "month"
+msgid_plural "months"
+msgstr[0] "mes"
+msgstr[1] "mes"
+
+#: lib/functions/both.php:276
+#, fuzzy
+msgid "time"
+msgid_plural "times"
+msgstr[0] "hora"
+msgstr[1] "hora"
+
+#: lib/functions/both.php:325
 msgid "The amount of persons was edited"
 msgstr "La quantitat de persones s'ha editat"
 
-#: lib/functions/both.php:336
+#: lib/functions/both.php:337
 #, fuzzy
 msgid "The resource got changed"
 msgstr "Les instal·lacions s'ha editat"
 
-#: lib/functions/both.php:340
+#: lib/functions/both.php:341
 msgid "The message was edited"
 msgstr "El missatge s'ha editat"
 
-#: lib/functions/both.php:348
+#: lib/functions/both.php:349
 #, fuzzy
 msgid "Prices  got edited"
 msgstr "Els preus s'han editat"
 
-#: lib/functions/both.php:416 lib/functions/both.php:422
+#: lib/functions/both.php:417 lib/functions/both.php:423
 #, php-format
 msgid "%s is required"
 msgstr "%s és obligatori"
 
-#: lib/functions/both.php:661
+#: lib/functions/both.php:662
 msgid "Monday"
 msgstr "Dilluns"
 
-#: lib/functions/both.php:662
+#: lib/functions/both.php:663
 msgid "Tuesday"
 msgstr "Dimarts"
 
-#: lib/functions/both.php:663
+#: lib/functions/both.php:664
 msgid "Wednesday"
 msgstr "Dimecres"
 
-#: lib/functions/both.php:664
+#: lib/functions/both.php:665
 msgid "Thursday"
 msgstr "Dijous"
 
-#: lib/functions/both.php:665
+#: lib/functions/both.php:666
 msgid "Friday"
 msgstr "Divendres"
 
-#: lib/functions/both.php:666
+#: lib/functions/both.php:667
 msgid "Saturday"
 msgstr "Dissabte"
 
-#: lib/functions/both.php:667
+#: lib/functions/both.php:668
 msgid "Sunday"
 msgstr "Diumenge"
 
-#: lib/functions/both.php:669
+#: lib/functions/both.php:670
 msgid "January"
 msgstr "Gener"
 
-#: lib/functions/both.php:670
+#: lib/functions/both.php:671
 msgid "February"
 msgstr "Febrer"
 
-#: lib/functions/both.php:671
+#: lib/functions/both.php:672
 msgid "March"
 msgstr "Març"
 
-#: lib/functions/both.php:672
+#: lib/functions/both.php:673
 msgid "April"
 msgstr "Abril"
 
-#: lib/functions/both.php:673
+#: lib/functions/both.php:674
 msgid "May"
 msgstr "Maig"
 
-#: lib/functions/both.php:674
+#: lib/functions/both.php:675
 msgid "June"
 msgstr "Juny"
 
-#: lib/functions/both.php:675
+#: lib/functions/both.php:676
 msgid "July"
 msgstr "Juliol"
 
-#: lib/functions/both.php:676
+#: lib/functions/both.php:677
 msgid "August"
 msgstr "Agost"
 
-#: lib/functions/both.php:677
+#: lib/functions/both.php:678
 msgid "September"
 msgstr "Setembre"
 
-#: lib/functions/both.php:678
+#: lib/functions/both.php:679
 msgid "October"
 msgstr "Octubre"
 
-#: lib/functions/both.php:679
+#: lib/functions/both.php:680
 msgid "November"
 msgstr "Novembre"
 
-#: lib/functions/both.php:680
+#: lib/functions/both.php:681
 msgid "December"
 msgstr "Desiembre"
 
@@ -3572,27 +3563,27 @@ msgstr "Cupó %s eliminat"
 msgid "Text field to enter coupon codes"
 msgstr "Camp de texte amb Selecció de data"
 
-#: lib/modules/hourlycal/hourlycal.php:197
+#: lib/modules/hourlycal/hourlycal.php:198
 msgid "Clock"
 msgstr ""
 
-#: lib/modules/hourlycal/hourlycal.php:206
+#: lib/modules/hourlycal/hourlycal.php:207
 msgid "Display"
 msgstr "Mostrar"
 
-#: lib/modules/hourlycal/hourlycal.php:206
+#: lib/modules/hourlycal/hourlycal.php:207
 msgid "Navigation"
 msgstr "Navegació"
 
-#: lib/modules/hourlycal/hourlycal.php:210
+#: lib/modules/hourlycal/hourlycal.php:211
 msgid "Display hours from"
 msgstr "Mostrar hores des de"
 
-#: lib/modules/hourlycal/hourlycal.php:210
+#: lib/modules/hourlycal/hourlycal.php:211
 msgid "to"
 msgstr "per"
 
-#: lib/modules/hourlycal/hourlycal.php:240
+#: lib/modules/hourlycal/hourlycal.php:241
 msgid "Hourly Calendar"
 msgstr "Calendari per Hora"
 
@@ -3818,7 +3809,6 @@ msgid "Display months"
 msgstr "Mostrar Errors"
 
 #: lib/modules/multical/multical.php:24 lib/modules/paypal/creditcards.php:252
-#: lib/modules/useredit/useredit.php:443
 msgid "Month"
 msgstr "Mes"
 
@@ -4194,15 +4184,15 @@ msgstr "o paga amb targeta de crèdit"
 msgid "Choose payment gateway"
 msgstr ""
 
-#: lib/modules/paypal/paypal.php:740 lib/modules/paypal/paypal.php:746
+#: lib/modules/paypal/paypal.php:741 lib/modules/paypal/paypal.php:747
 msgid "Pay a deposit of"
 msgstr ""
 
-#: lib/modules/paypal/paypal.php:750
+#: lib/modules/paypal/paypal.php:751
 msgid "Pay the full price of"
 msgstr ""
 
-#: lib/modules/paypal/paypal.php:802
+#: lib/modules/paypal/paypal.php:818
 #, php-format
 msgid "Payment about %1$s successful"
 msgstr "pagament sobre %1$s satisfactori"
@@ -4766,10 +4756,6 @@ msgstr "Minuts"
 msgid "Hour"
 msgstr "Hora"
 
-#: lib/modules/useredit/useredit.php:442
-msgid "Week"
-msgstr "Setmana"
-
 #: lib/modules/useredit/useredit.php:504 lib/modules/useredit/useredit.php:531
 #: lib/modules/useredit/useredit.php:555 lib/modules/useredit/useredit.php:614
 msgid "An error occurred, please try again"
@@ -4979,6 +4965,28 @@ msgstr "URL del formulari:"
 #: lib/widgets/form_widget.php:187
 msgid "Submit button:"
 msgstr "Butó d'enviar:"
+
+#, fuzzy
+msgid "Category:"
+msgstr ""
+"#-#-#-#-#  29extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  55extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#~ msgid "Day"
+#~ msgstr "Dia"
+
+#~ msgid "Days"
+#~ msgstr "Dies"
+
+#, fuzzy
+#~ msgid "hours"
+#~ msgstr "Hores"
+
+#~ msgid "Departure Date"
+#~ msgstr "Data de sortida"
+
+#~ msgid "Week"
+#~ msgstr "Setmana"
 
 #~ msgid "Adult's"
 #~ msgstr "Adults"

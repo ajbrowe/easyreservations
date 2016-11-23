@@ -226,7 +226,7 @@ function easyFormSubmit(submit){
 				easyReservationDatas.push(data);
 				easyReservationsPrice.push(response[1]);
 				if(submit  && submit == 1){
-                    if(window.$fragment_refresh) jQuery.ajax( $fragment_refresh );
+          if(window.$fragment_refresh) jQuery.ajax( $fragment_refresh );
 					easyReservationIDs = new Array();
 					easyReservationDatas = new Array();
 					easyReservationsPrice = new Array();

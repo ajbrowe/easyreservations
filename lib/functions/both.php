@@ -275,6 +275,7 @@
 			$string = _n('month', 'months', $singular, 'easyReservations');
 		} else $string = _n('time', 'times', $singular, 'easyReservations');
 
+		if($mode) return ucfirst($string);
 		return $string;
 	}
 
@@ -683,7 +684,10 @@
 		if($substr > 0 && function_exists('mb_internal_encoding')) mb_internal_encoding("UTF-8");
 		foreach($name as $key => $day){
 			if($substr > 0 && function_exists('mb_substr')) $name[$key] = mb_substr($day, 0, $substr);
-			elseif($substr > 0) $name[$key] = substr($day, 0, $substr);
+			elseif($substr > 0){
+				//$name[$key] = substr($day, 0, $substr);
+				$name[$key] = htmlentities(substr(html_entity_decode($day), 0, $substr));
+			}
 			if($addslashes) $name[$key] = addslashes($name[$key]);
 		}
 

@@ -127,7 +127,7 @@ function easyreservations_send_calendar_callback(){
 			try {
 				$res->admin = false;
 				if($atts['price'] > 0 && is_numeric($atts['price'])){
-					$res->Calculate();
+					$res->Calculate(false, isset($atts['notax']) && $atts['notax'] > 0 ? false : true);
 					if($atts['price'] == 1 || $atts['price'] == 2){ $explode = explode('.', $res->price); $res->price = $explode[0]; }
 					if($atts['price'] == 1) $formated_price = $res->price.'&'.RESERVATIONS_CURRENCY.';';
 					elseif($atts['price'] == 2) $formated_price = $res->price;
@@ -152,7 +152,7 @@ function easyreservations_send_calendar_callback(){
 					elseif($lastavail[0] > 0) $last = " calendar-cell-occupied";
 					else $last = " calendar-cell-empty";
 				}
-				if($last != $new && ($avail[1] > 0)){
+				if($last !== $new && ($avail[1] > 0)){
 					$background_td.= $last.'2';
 					$background_td.=" calendar-cell-halfend";
 				}
@@ -263,8 +263,9 @@ function easyreservations_send_form_callback(){
 			if(isset($_POST['nights'])){
 				$departure = $arrival+((int) $_POST['nights'] * $the_rooms_intervals_array[$_POST['easyroom']]);
 				if(!isset($_POST['date-to-hour'])) $departure += $arrivalplus;
+			}	elseif($departureplus == 0){
+				$departure += $arrivalplus + $the_rooms_intervals_array[$_POST['easyroom']];
 			}
-			elseif($departureplus == 0) $departure += $arrivalplus + $the_rooms_intervals_array[$_POST['easyroom']];
 		}
 		$arrival += $arrivalplus;
 		$departure += $departureplus;
@@ -424,13 +425,16 @@ function easyreservations_send_validate_callback(){
 	} elseif($_POST['nights'] !== '') {
 		$val_to = $real_from + ((int)$_POST['nights'] * $the_rooms_intervals_array[$val_room])  + (int) $_POST['toplus'];
 	} else {
-		$val_to = $val_from->getTimestamp() + (int) $_POST['toplus'] + $the_rooms_intervals_array[$val_room];
+		if((int) $_POST['toplus'] > 0)
+			$val_to = $val_from->getTimestamp() + (int) $_POST['toplus'] + $the_rooms_intervals_array[$val_room];
+		else
+			$val_to = $real_from + $the_rooms_intervals_array[$val_room];
 	}
 
 	if(isset($_POST['id']) && !empty($_POST['id'])) $id = $_POST['id'];
 	else $id = false;
 	try {
-		$res = new Reservation($id, array('name' =>  $_POST['thename'], 'email' => $_POST['email'], 'arrival' => $real_from,'departure' => $val_to,'resource' => (int) $_POST['room'], 'adults' => (int) $_POST['persons'], 'childs' => (int) $_POST['childs'],'reservated' => time(),'status' => ''), false);
+		$res = new Reservation($id, array('name' =>  $_POST['thename'], 'email' => $_POST['email'], 'arrival' => $real_from, 'departure' => $val_to,'resource' => (int) $_POST['room'], 'adults' => (int) $_POST['persons'], 'childs' => (int) $_POST['childs'],'reservated' => time(),'status' => ''), false);
 		$res->admin = false;
 		if(isset($_POST['ids'])) $ids = $_POST['ids'];
 		else $ids = false;
@@ -671,14 +675,17 @@ function easyreservations_send_table_callback() {
 		}
 		if(isset($searchsign)) $searchstr .= ')';
 	}
-	$items1 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='yes' $zeichen $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	$items2 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='no' $zeichen $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	$items3 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='' $zeichen $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	$items4 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='yes' AND departure < NOW() $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	$items5 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='del' $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	$items7 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='yes' AND NOW() BETWEEN arrival AND departure $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	$items6 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE 1=1 $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
-	if(isset($favourite_sql)) $countfav = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE $favourite_sql $selectors $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
+
+	$esc_like = '%' . $wpdb->esc_like($search) . '%';
+	if(empty($searchstr)) $searchstr = ' %n ';
+	$items1 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='yes' $zeichen $selectors $searchstr $permission_selectors", $esc_like));
+	$items2 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='no' $zeichen $selectors $searchstr $permission_selectors", $esc_like));
+	$items3 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='' $zeichen $selectors $searchstr $permission_selectors", $esc_like));
+	$items4 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='yes' AND departure < NOW() $selectors $searchstr $permission_selectors", $esc_like));
+	$items5 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='del' $selectors $searchstr $permission_selectors", $esc_like));
+	$items7 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE approve='yes' AND NOW() BETWEEN arrival AND departure $selectors $searchstr $permission_selectors", $esc_like));
+	$items6 = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE 1=1 $selectors $searchstr $permission_selectors", $esc_like));
+	if(isset($favourite_sql)) $countfav = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE $favourite_sql $selectors $searchstr $permission_selectors", $esc_like));
 	else $favourite_sql = ' 1 = 1 ';
 	if(!isset($typ) || $typ=='active' || $typ=='') { $type="approve='yes'"; $items=$items1; $orders="ASC";  $zeichen = "AND departure > NOW() "; } // If type is actice
 	elseif($typ=="current") { $type="approve='yes'"; $items=$items7; $orders="ASC"; $zeichen ="AND NOW() BETWEEN arrival AND departure "; } // If type is current
@@ -703,7 +710,7 @@ function easyreservations_send_table_callback() {
 	if(empty($orderby) && $typ=="old") { $ordersby="arrival"; $orders="DESC"; }
 	if(empty($orderby) && $typ=="all") { $ordersby="arrival"; $orders="DESC"; }
 	if(isset($monthselector) || isset($roomselector) || isset($statusselector)){
-		$variableitems = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE $type $selectors $zeichen $searchstr $permission_selectors", '%' . $wpdb->esc_like($search) . '%'));
+		$variableitems = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix ."reservations WHERE $type $selectors $zeichen $searchstr $permission_selectors", $esc_like));
 		$items=$variableitems;
 	}
 	if(!isset($roomselector)) $roomselector="";
@@ -867,7 +874,7 @@ function easyreservations_send_table_callback() {
 		$export_ids = '';
 		$sql = "SELECT id, arrival, departure, name, email, number, childs, room, roomnumber, country, approve, price, custom, customp, reservated FROM ".$wpdb->prefix ."reservations
 						WHERE $type $selectors $zeichen $searchstr $permission_selectors ORDER BY $ordersby $orders $limit";  // Main Table query
-		$result = $wpdb->get_results( $wpdb->prepare($sql, '%' . $wpdb->esc_like($search) . '%'));
+		$result = $wpdb->get_results( $wpdb->prepare($sql, $esc_like));
 
 		if(count($result) > 0 ){
 			foreach($result as $res){
@@ -974,6 +981,8 @@ function easyreservations_send_table_callback() {
 										$custom['amount'] = $res->calculateCustom($custom['id'], $custom['value'], $custom_fields);
 										$custom['value'] = $custom_field['options'][$custom['value']]['value'];
 									}
+									if(!isset($custom['amount']))
+										$custom['amount'] = 0;
 									echo '<b>'.$custom['title'].':</b> '.$custom['value'].' - '.easyreservations_format_money($custom['amount'], 1).'<br>';
 								}
 							}?></td>

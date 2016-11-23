@@ -216,7 +216,7 @@ if(isset($_GET['page'])){
 				$box .= '<b><span style="color:'.$color.'">'.easyreservations_format_money($res->paid, true).'</span> <small>'.$percent.'%</small></b>';
 			$box .= '</span>';
 			$box .= '<span>';
-				$box .= __( 'time' , 'easyReservations' );
+				$box .= easyreservations_interval_infos(0,0,1);
 				$box .= '<b style="color:'.$text_color.'">'.$text.'</b>';
 			$box .= '</span>';
 			$box .= '<span>';
@@ -233,12 +233,12 @@ if(isset($_GET['page'])){
 	
 	function easyreservations_get_emails(){
 		$emails = array(
-			'reservations_email_sendmail'						=> array('name' => __('Mail to guest from admin in dashboard'), 'option' => get_option('reservations_email_sendmail'), 'name_subj' => 'reservations_email_sendmail_subj', 'name_msg' => 'reservations_email_sendmail_msg', 'standard' => '0', 'name_active' => 'reservations_email_sendmail_check'),
+			'reservations_email_sendmail'			  			=> array('name' => __('Mail to guest from admin in dashboard'), 'option' => get_option('reservations_email_sendmail'), 'name_subj' => 'reservations_email_sendmail_subj', 'name_msg' => 'reservations_email_sendmail_msg', 'standard' => '0', 'name_active' => 'reservations_email_sendmail_check'),
 			'reservations_email_to_user'							=> array('name' => __('Mail to guest after new reservation'), 'option' => get_option('reservations_email_to_user'), 'name_subj' => 'reservations_email_to_user_subj', 'name_msg' => 'reservations_email_to_user_msg', 'standard' => '4', 'name_active' => 'reservations_email_to_user_check'),
 			'reservations_email_to_userapp'						=> array('name' => __('Mail to guest after approval'), 'option' => get_option('reservations_email_to_userapp'), 'name_subj' => 'reservations_email_to_userapp_subj', 'name_msg' => 'reservations_email_to_userapp_msg', 'standard' => '2', 'name_active' => 'reservations_email_to_userapp_check'),
 			'reservations_email_to_userdel'						=> array('name' => __('Mail to guest after rejection'), 'option' => get_option('reservations_email_to_userdel'), 'name_subj' => 'reservations_email_to_userdel_subj', 'name_msg' => 'reservations_email_to_userdel_msg', 'standard' => '3', 'name_active' => 'reservations_email_to_userdel_check'),
 			'reservations_email_to_user_admin_edited'	=> array('name' => __('Mail to guest after admin edited'), 'option' => get_option('reservations_email_to_user_admin_edited'), 'name_subj' => 'reservations_email_to_user_admin_edited_subj', 'name_msg' => 'reservations_email_to_user_admin_edited_msg', 'standard' => '7', 'name_active' => 'reservations_email_to_user_admin_edited_check'),
-			'reservations_email_to_admin'						=> array('name' => __('Mail to admin after new reservation'), 'option' => get_option('reservations_email_to_admin'), 'name_subj' => 'reservations_email_to_admin_subj', 'name_msg' => 'reservations_email_to_admin_msg', 'standard' => '1', 'name_active' => 'reservations_email_to_admin_check'),
+			'reservations_email_to_admin'				  		=> array('name' => __('Mail to admin after new reservation'), 'option' => get_option('reservations_email_to_admin'), 'name_subj' => 'reservations_email_to_admin_subj', 'name_msg' => 'reservations_email_to_admin_msg', 'standard' => '1', 'name_active' => 'reservations_email_to_admin_check'),
 		);
 		return apply_filters('easy-email-types', $emails);
 	}
@@ -393,7 +393,7 @@ if(isset($_GET['page'])){
 					$current .= '<label><input type="checkbox" name="overview_autoselect" value="1" '.checked($overview['overview_autoselect'], 1, false).'> '.__( 'Overview autoselect with inputs on add/edit' , 'easyReservations').'</label><br>';
 					$current .= '<label><input type="checkbox" name="overview_show_avail" value="1" '.checked($overview['overview_show_avail'], 1, false).'> '.__( 'Show empty space for each resource and day (+20% load)' , 'easyReservations').'</label><br>';
 					$current .= '<label><input type="checkbox" name="overview_hourly_stand" value="1" '.checked($overview['overview_hourly_stand'], 1, false).'> '.__( 'Hourly mode as standard' , 'easyReservations').'</label><br>';
-					$current.='<input type="text" name="overview_show_days" style="width:50px" value="'.$overview['overview_show_days'].'"> '.__( 'Days' , 'easyReservations' );
+					$current.='<input type="text" name="overview_show_days" style="width:50px" value="'.$overview['overview_show_days'].'"> '.easyreservations_interval_infos(86400,1);
 				$current .= '</p>';
 				$current .= '<input type="submit" value="Save Changes" class="button-primary" style="float:right;margin-top:120px !important">';
 			$current .= '</div></form>';

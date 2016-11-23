@@ -42,7 +42,7 @@ function easyInArray(array, needle){
 	return false;
 }
 function changePayPalAmount(place){
-	var price = easyStartPrice
+	var price = easyStartPrice;
 	if(place == 'perc'){
 		document.getElementById('easy_radio_perc').checked = true;
 		var perc = document.getElementById('easy_deposit_perc').value;
@@ -58,10 +58,7 @@ function changePayPalAmount(place){
 	}
 	if(price > 0){
 		price = Math.round(price*Math.pow(10,2))/Math.pow(10,2);
-		if(document._xclick) document._xclick.amount.value = price;
-		else if(document.authorize) document.authorize.x_amount.value = price;
-		else if(document.googlewallet) document.googlewallet.item_price_1.value = price;
-		else if(document.checkout){ document.checkout.li_0_price.value = price; document.checkout.x_amount.value = price; }
-		else if(document.dibs){ document.dibs.amount.value = price.toFixed(2).replace(".",""); }
+		easy_set_deposit_amount(price);
+		jQuery('script[data-amount]').attr('data-amount', price*100);
 	}
 }

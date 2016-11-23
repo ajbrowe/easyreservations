@@ -2,8 +2,8 @@
 Contributors: feryaz
 Tags: booking, reservation, form, reservations, property, resources, hotel, restaurant, hospitality, management, calendar, events
 Requires at least: 3.3
-Tested up to: 4.2.2
-Stable tag: 3.5
+Tested up to: 4.5.3
+Stable tag: 3.5.1
 This powerful property and reservation management plugin that allows you to receive, schedule and handle your bookings easily!
 
 == Description ==

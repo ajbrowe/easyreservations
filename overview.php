@@ -48,8 +48,10 @@ else {
 |	Calculate Overview
 |
 /* - - - - - - - - - - - - - - - - */
+if(!isset($days_after_present)) $days_after_present=0;
 
-$timevariable=strtotime(date("d.m.Y 00:00:00", time()))-($interval*3); //Timestamp of first Second of today
+$timevariable = strtotime(date("d.m.Y 00:00:00", time()))-($interval*3); //Timestamp of first Second of today
+
 $timesx=easyreservations_calculate_out_summertime($timevariable+$interval*$days_after_present, $timevariable); // Timestamp of Startdate of Overview
 $timesy=$timesx+$interval*$days_to_show; // Timestamp of Enddate of Overview
 $dateshow=date("d. ", $timesx).$monthes[date("n", $timesx)-1].date(" Y", $timesx).' - '.date("d. ", $timesy-$interval).$monthes[date("n", $timesy-$interval)-1].date(" Y", $timesy-$interval);
@@ -64,7 +66,6 @@ if(isset($reservation_arrival_stamp)){
 	if($numberhighstart<10) $numberhighstart='0'.$numberhighstart;
 }
 
-if(!isset($days_after_present)) $days_after_present=0;
 
 if(RESERVATIONS_STYLE == 'widefat'){
 	$ovBorderColor='#9E9E9E';
@@ -74,6 +75,7 @@ if(RESERVATIONS_STYLE == 'widefat'){
 	$ovBorderStatus='dashed';
 }
 
+$days_string = easyreservations_interval_infos(86400,1);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + OVERVIEW + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + */
@@ -101,13 +103,13 @@ if(RESERVATIONS_STYLE == 'widefat'){
 </tr>
 <tr id="overviewTheadTr">
     <td class="h1overview" <?php if($interval == 3600) echo 'rowspan="2"'; ?>>
-        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present-($days_to_show);?>','no', '<?php echo $days_to_show; ?>', <?php echo $interval; ?>);" title="-<?php echo ($days_to_show).' '.__( 'Days' , 'easyReservations' ); ?>" style="cursor:pointer;"><b style="letter-spacing:-4px">&lsaquo; &lsaquo; &lsaquo; &nbsp;&nbsp;</b></a>
-        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present-round($days_to_show/2);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="-<?php echo round($days_to_show/2).' '.__( 'Days' , 'easyReservations' ); ?>" style="cursor:pointer;"><b>&laquo;</b></a>
-        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present-round($days_to_show/3);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="-<?php echo round($days_to_show/3).' '.__( 'Days' , 'easyReservations' ); ?>" style="cursor:pointer;"><b>&lsaquo;</b></a>
+        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present-($days_to_show);?>','no', '<?php echo $days_to_show; ?>', <?php echo $interval; ?>);" title="-<?php echo ($days_to_show).' '.$days_string; ?>" style="cursor:pointer;"><b style="letter-spacing:-4px">&lsaquo; &lsaquo; &lsaquo; &nbsp;&nbsp;</b></a>
+        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present-round($days_to_show/2);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="-<?php echo round($days_to_show/2).' '.$days_string; ?>" style="cursor:pointer;"><b>&laquo;</b></a>
+        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present-round($days_to_show/3);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="-<?php echo round($days_to_show/3).' '.$days_string; ?>" style="cursor:pointer;"><b>&lsaquo;</b></a>
         <span id="easy-overview-loading"><a onclick="easyRes_sendReq_Overview('0','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="<?php echo __( 'Present' , 'easyReservations' ); ?>" style="cursor:pointer;"><b>&omicron;</b></a></span>
-        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present+round($days_to_show/3);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="+<?php echo round($days_to_show/3).' '.__( 'Days' , 'easyReservations' ); ?>" style="cursor:pointer;"><b>&rsaquo;</b></a>
-        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present+round($days_to_show/2);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="+<?php echo round($days_to_show/2).' '.__( 'Days' , 'easyReservations' ); ?>" style="cursor:pointer;"><b>&raquo;</b></a>
-        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present+($days_to_show);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="+<?php echo ($days_to_show).' '.__( 'Days' , 'easyReservations' ); ?>" style="cursor:pointer;"><b style="letter-spacing:-4px">&rsaquo; &rsaquo; &rsaquo; &nbsp;&nbsp;</b></a>
+        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present+round($days_to_show/3);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="+<?php echo round($days_to_show/3).' '.$days_string; ?>" style="cursor:pointer;"><b>&rsaquo;</b></a>
+        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present+round($days_to_show/2);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="+<?php echo round($days_to_show/2).' '.$days_string; ?>" style="cursor:pointer;"><b>&raquo;</b></a>
+        <a onclick="easyRes_sendReq_Overview('<?php echo $days_after_present+($days_to_show);?>','no', '<?php echo $days_to_show; ?>',<?php echo $interval; ?>);" title="+<?php echo ($days_to_show).' '.$days_string; ?>" style="cursor:pointer;"><b style="letter-spacing:-4px">&rsaquo; &rsaquo; &rsaquo; &nbsp;&nbsp;</b></a>
     </td>
 	<?php
 	$co=0;
@@ -259,7 +261,7 @@ foreach( $all_resources as $key => $resource){ /* - + - FOREACH ROOM - + - */
 					$res_nights = round((strtotime(date($date_pattern,$res_departure)) - strtotime(date($date_pattern,$res_arrival))) / $interval);
 					for($i=0; $i <= $res_nights; $i++){
 						if($timesx <= $res_arrival+($i*$interval) && $res_nights >= 1){
-							$daysOccupied[]=date($date_pat, $res_arrival+($i*$interval)+$interval);
+							$daysOccupied[]=date($date_pat, easyreservations_calculate_out_summertime($res_arrival+($i*$interval)+$interval, $res_arrival));
 							$numberOccupied[]=$countdifferenz;
 							if($avail_by_pers){
 								if(isset($personsOccupied[date($date_pat, $res_arrival+($i*$interval)+$interval)])) $personsOccupied[date($date_pat, $res_arrival+($i*$interval)+$interval)] += $reservation->persons;
@@ -312,18 +314,18 @@ foreach( $all_resources as $key => $resource){ /* - + - FOREACH ROOM - + - */
 				}
 				continue;
 			}
-
 			if(isset($daysOccupied)){
+
 				if(in_array(date($date_pat, $dateToday), $daysOccupied)){
 					if($numberOccupied[$CoutResNights3] != $CountNumberOfAdd && $cell_count != 1) $CountNumberOfAdd++;
-					//if($reservation_array[$CountNumberOfAdd]['nights'] < 1) while($reservation_array[$CountNumberOfAdd]['nights'] < 1) $CountNumberOfAdd++;
+					//if(isset($reservation_array[$CountNumberOfAdd]['nights']) && $reservation_array[$CountNumberOfAdd]['nights'] < 1) while($reservation_array[$CountNumberOfAdd]['nights'] < 1) $CountNumberOfAdd++;
 					$arrival = $reservation_array[$CountNumberOfAdd]['arDate'];
 					$departure = $reservation_array[$CountNumberOfAdd]['departure'];
 					$nights = $reservation_array[$CountNumberOfAdd]['nights'];
 
-					if(isset($daysOccupied[$CoutResNights3+1]) && isset($numberOccupied[$CoutResNights3-1]) && $numberOccupied[$CoutResNights3-1] != $daysOccupied[$CoutResNights3] && $numberOccupied[$CoutResNights3-1] != $numberOccupied[$CoutResNights3])$wasFullTwo=1;
+					if(isset($daysOccupied[$CoutResNights3+1]) && isset($numberOccupied[$CoutResNights3-1]) && $numberOccupied[$CoutResNights3-1] !== $daysOccupied[$CoutResNights3] && $numberOccupied[$CoutResNights3-1] !== $numberOccupied[$CoutResNights3])$wasFullTwo=1;
 
-					if(($CoutResNights2 == 0 && $cell_count != 1) || ($wasFullTwo == 1 && $cell_count != 1) || $dateToday - $arrival <= $interval){
+					if(($CoutResNights2 == 0 && $cell_count != 1) || ($wasFullTwo == 1 && $cell_count !== 1) || $dateToday - $arrival <= $interval){
 						$bg_color_occ="url(".RESERVATIONS_URL ."images/1REPLACE_start.png) right top no-repeat, ".$bg_pattern." ".$bg_color_free;
 						$itIS=0;
 					} elseif($CoutResNights2 != 0 || $cell_count == 1 || (isset($daysOccupied[$CoutResNights3]) && $lastDay==$daysOccupied[$CoutResNights3])){
@@ -331,11 +333,13 @@ foreach( $all_resources as $key => $resource){ /* - + - FOREACH ROOM - + - */
 						if($cell_count != 1) $borderside=0;
 						$itIS++;
 					}
-					if(isset($daysOccupied[$CoutResNights3+1]) && $daysOccupied[$CoutResNights3] != $daysOccupied[$CoutResNights3+1] && $numberOccupied[$CoutResNights3] != $numberOccupied[$CoutResNights3+1]){
+
+					if(isset($daysOccupied[$CoutResNights3+1]) && $daysOccupied[$CoutResNights3] !== $daysOccupied[$CoutResNights3+1] && $numberOccupied[$CoutResNights3] !== $numberOccupied[$CoutResNights3+1]){
 						$bg_color_occ="url(".RESERVATIONS_URL ."images/1REPLACE_end.png) left top no-repeat, ".$bg_pattern." ".$bg_color_free;
 						$itIS=0;
+
 					}
-					if(isset($daysOccupied[$CoutResNights3+1]) && $daysOccupied[$CoutResNights3] == $daysOccupied[$CoutResNights3+1] && array_key_exists($CoutResNights3+1, $daysOccupied)){
+					if(isset($daysOccupied[$CoutResNights3+1]) && $daysOccupied[$CoutResNights3] === $daysOccupied[$CoutResNights3+1] && array_key_exists($CoutResNights3+1, $daysOccupied)){
 						$bg_color_occ='url('.RESERVATIONS_URL .'images/1REPLACE_cross.png) left top no-repeat 2REPLACE';
 						$CoutResNights2=0;
 						$CoutResNights3++;
@@ -345,6 +349,7 @@ foreach( $all_resources as $key => $resource){ /* - + - FOREACH ROOM - + - */
 						$nights = $reservation_array[$CountNumberOfAdd]['nights'];
 						$itIS=0;
 						$onClick=1;
+
 					}
 					if(!in_array(date($date_pat, $dateToday+$interval), $daysOccupied) || isset($datesHalfOccupied[$dateToday-$interval])){
 						$bg_color_occ="url(".RESERVATIONS_URL ."images/1REPLACE_end.png) left top no-repeat, ".$bg_pattern." ".$bg_color_free;
