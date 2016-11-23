@@ -89,6 +89,7 @@ function reservations_form_shortcode($atts){
 		if(isset($_POST['easyroom'])) $room = $_POST['easyroom'];
 		else $room = false;
 
+		$departure = 0;
 		$arrivalplus = 0;
 		if(isset($_POST['date-from-hour'])) $arrivalplus += (int) $_POST['date-from-hour'] * 60;
 		else $arrivalplus += 12*60;
@@ -106,9 +107,11 @@ function reservations_form_shortcode($atts){
 			if(isset($_POST['nights'])){
 				$departure = $arrival+((int) $_POST['nights'] * $the_rooms_intervals_array[$_POST['easyroom']]);
 				if(!isset($_POST['date-to-hour'])) $departure += $arrivalplus;
+			}	elseif($departureplus == 0){
+				$departure += $arrivalplus + $the_rooms_intervals_array[$_POST['easyroom']];
 			}
-			elseif($departureplus == 0) $departure += $arrivalplus + $the_rooms_intervals_array[$_POST['easyroom']];
 		}
+
 		$arrival += $arrivalplus;
 		$departure += $departureplus;
 
@@ -141,7 +144,7 @@ function reservations_form_shortcode($atts){
 		if(empty($error) && isset($arrival)){ //When Check gives no error Insert into Database and send mail
 			do_action('reservation_successful_guest', $res);
 			$finalform .= '<div class="easy_form_success" id="easy_form_success">';
-			if(!empty($atts['submit'])) $finalform.= '<b class="easy_submit">'.$atts['submit'].'!</b>';
+			if(!empty($atts['submit'])) $finalform.= '<b class="easy_submit">'.$atts['submit'].'</b>';
 			if(!empty($atts['subsubmit'])) $finalform.= '<span class="easy_subsubmit">'.$atts['subsubmit'].'</span>';
 			$res->Calculate(true);
 			if($atts['price'] == 1) $finalform.= '<span class="easy_show_price_submit">'.__('Price','easyReservations').': <b>'.easyreservations_format_money($res->price, 1).'</b></span>';

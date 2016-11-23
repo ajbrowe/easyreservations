@@ -204,7 +204,7 @@ input[type=text], select {
 	Settings Navigation
 	
 */
-.reservation_page_reservation-settings .tabs-box {
+.tabs-box {
     width:99% !important;
 	color: #fff;
 	border:1px solid #575757 !important;
@@ -216,7 +216,12 @@ input[type=text], select {
 	-webkit-box-shadow: 0px 0px 1px #848484; /* webkit browser*/ 
 	-moz-box-shadow: 0px 0px 1px #848484; /* firefox */
 	box-shadow: 0px 0px 1px #848484;
-	margin-bottom:10px
+	margin-bottom:10px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
 }
 /* link inside the tab. uses a background image */
 ul.tabs a { 

@@ -20,7 +20,7 @@ function easyreservations_get_filter_description($filter, $res, $type){
 		if(isset($filter['modus'])){
 			if($filter['modus']=='%') $price = $filter['price'].' %';
 			elseif($filter['modus']=='price_res') $price = easyreservations_format_money($filter['price'], 1).'<br>/'.__('Reservation','easyReservations');
-			elseif($filter['modus']=='price_day') $price = easyreservations_format_money($filter['price'], 1).'<br>/'.__('Day','easyReservations');
+			elseif($filter['modus']=='price_day') $price = easyreservations_format_money($filter['price'], 1).'<br>/'.easyreservations_interval_infos(86400,1,1);
 			elseif($filter['modus']=='price_pers') $price = easyreservations_format_money($filter['price'], 1).'<br>/'.__('Person','easyReservations');
 			elseif($filter['modus']=='price_both') $price = easyreservations_format_money($filter['price'], 1).'<br>/'.__('Person and Day','easyReservations');
 			elseif($filter['modus']=='price_adul') $price = easyreservations_format_money($filter['price'], 1).'<br>/'.__('Adult','easyReservations');
@@ -776,7 +776,7 @@ if(!isset($site) || $site=='' || $site =='main'){
 						<tr>
 							<td onclick="jQuery('#price_filter_cond_unit').attr('checked', true);">
 								<span style="padding:2px 0px 2px 18px;margin-top:5px;float:none"><b><u><?php echo __( 'Hours' , 'easyReservations' ); ?></u></b></span><br>
-								<span style="padding:2px 0px 2px 18px;"><i><?php echo __( 'select nothing to change price/availability for entire' , 'easyReservations' ).' '.__( 'day' , 'easyReservations' );?></i></span><br>
+								<span style="padding:2px 0px 2px 18px;"><i><?php echo __( 'select nothing to change price/availability for entire' , 'easyReservations' ).' '.easyreservations_interval_infos(86400,0,1);?></i></span><br>
 								<span style="min-width:99%;display:block;float:left">
 								<div style="padding:0px 0px 0px 18px;margin:3px;width:54px;float:left;">
 									<label><input type="checkbox" name="price_filter_unit_hour[]" value="0"> 00:00</label>
@@ -811,7 +811,7 @@ if(!isset($site) || $site=='' || $site =='main'){
 									<label><input type="checkbox" name="price_filter_unit_hour[]" value="23"> 23:00</label>
 								</div>
 							</span>
-							<span style="padding:2px 0px 2px 18px;"><b><u><?php echo __( 'Days' , 'easyReservations' ); ?></u></b></span><br>
+							<span style="padding:2px 0px 2px 18px;"><b><u><?php easyreservations_interval_infos(86400,1); ?></u></b></span><br>
 							<span style="padding:2px 0px 2px 18px;"><i><?php echo __( 'select nothing to change price/availability for entire' , 'easyReservations' ).' '.__( 'calendar week' , 'easyReservations' );
 							?></i></span><br>
 							<span style="min-width:99%;display:block;float:left">
@@ -829,7 +829,7 @@ if(!isset($site) || $site=='' || $site =='main'){
 							</span>
 
 							<span style="padding:2px 0px 2px 18px;margin-top:5px;float:none"><b><u><?php echo __( 'Calendar Week' , 'easyReservations' ); ?></u></b></span><br>
-							<span style="padding:2px 0px 2px 18px;"><i><?php echo __( 'select nothing to change price/availability for entire' , 'easyReservations' ).' '.__( 'month' , 'easyReservations' ); ?></i></span><br>
+							<span style="padding:2px 0px 2px 18px;"><i><?php echo __( 'select nothing to change price/availability for entire' , 'easyReservations' ).' '.easyreservations_interval_infos(2592000,0,1); ?></i></span><br>
 							<span style="min-width:99%;display:block;float:left">
 								<div style="padding:0px 0px 0px 18px;margin:3px;width:38px;float:left;">
 									<label><input type="checkbox" name="price_filter_unit_cw[]" value="1"> 1</label>
@@ -894,6 +894,7 @@ if(!isset($site) || $site=='' || $site =='main'){
 								<div style="margin:3px;width:38px;float:left">
 									<label><input type="checkbox" name="price_filter_unit_cw[]" value="51"> 51</label>
 									<label><input type="checkbox" name="price_filter_unit_cw[]" value="52"> 52</label>
+									<label><input type="checkbox" name="price_filter_unit_cw[]" value="53"> 53</label>
 								</div>
 							</span>
 
@@ -1028,13 +1029,13 @@ if(!isset($site) || $site=='' || $site =='main'){
 									<b class="legend"><?php echo __( 'Mode' , 'easyReservations' ); ?>:</b>
 	                <select name="filter_form_discount_mode" id="filter_form_discount_mode">
                     <option value="price_res"><?php echo __( 'Price per reservation' , 'easyReservations' ); ?></option>
-                    <option value="price_day"><?php echo __( 'Price per billing' , 'easyReservations' ).' '.easyreservations_interval_infos($reservations_current_int, 1, 1); ?></option>
+                    <option value="price_day"><?php echo __( 'Price per billing' , 'easyReservations' ).' '.easyreservations_interval_infos($reservations_current_int, 0, 1); ?></option>
                     <option value="price_pers"><?php echo __( 'Price per persons' , 'easyReservations' ); ?></option>
                     <option value="price_adul"><?php echo __( 'Price per adults' , 'easyReservations' ); ?></option>
                     <option value="price_child"><?php echo __( 'Price per children\'s' , 'easyReservations' ); ?></option>
-                    <option value="price_both"><?php echo sprintf( __( 'Price per billing %s and persons' , 'easyReservations'), easyreservations_interval_infos($reservations_current_int, 1, 1)); ?></option>
-                    <option value="price_day_adult"><?php echo sprintf( __( 'Price per billing %s and adults' , 'easyReservations'), easyreservations_interval_infos($reservations_current_int, 1, 1)); ?></option>
-                    <option value="price_day_child"><?php echo sprintf( __( 'Price per billing %s and children\'s' , 'easyReservations'), easyreservations_interval_infos($reservations_current_int, 1, 1)); ?></option>
+                    <option value="price_both"><?php echo sprintf( __( 'Price per billing %s and persons' , 'easyReservations'), easyreservations_interval_infos($reservations_current_int, 0, 1)); ?></option>
+                    <option value="price_day_adult"><?php echo sprintf( __( 'Price per billing %s and adults' , 'easyReservations'), easyreservations_interval_infos($reservations_current_int, 0, 1)); ?></option>
+                    <option value="price_day_child"><?php echo sprintf( __( 'Price per billing %s and children\'s' , 'easyReservations'), easyreservations_interval_infos($reservations_current_int, 0, 1)); ?></option>
                     <option value="%"><?php echo __( 'Percent' , 'easyReservations' ); ?></option>
 	                </select>
 		            </span><br>
@@ -1141,7 +1142,7 @@ if(!isset($site) || $site=='' || $site =='main'){
 					document.getElementById('price_filter_range_to').value = (( date_to.getDate() < 10) ? '0'+ date_to.getDate() : date_to.getDate()) + '.' + (((date_to.getMonth()+1) < 10) ? '0'+ (date_to.getMonth()+1) : (date_to.getMonth()+1)) + '.' + (( date_to.getYear() < 999) ? date_to.getYear() + 1900 : date_to.getYear());
 				} else document.getElementById('price_filter_range_to').value = filter[i]['to'];
 			}
-			if(filter[i]['timecond'] && filter[i]['timecond'] == 'unit'){
+			if((filter[i]['timecond'] && filter[i]['timecond'] == 'unit') || (filter[i]['cond'] && filter[i]['cond'] == 'unit')){
         document.getElementById('price_filter_cond_unit').checked = true;
 				var hour_checkboxes = document.getElementsByName('price_filter_unit_hour[]');
 				if(hour_checkboxes && filter[i]['hour'] != '' && filter[i]['hour']){

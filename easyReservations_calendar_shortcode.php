@@ -17,6 +17,7 @@
 			'interval' => 1,
 			'monthes' => 1,
 			'select' => 2,
+			'notax' => 0,
 			'id' => rand(1,99999)
 		), $atts);
 

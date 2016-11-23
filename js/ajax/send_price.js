@@ -61,7 +61,6 @@ function easyreservations_send_price(form){
 
 	if(error == 0){
 		jQuery.post(easyAjax.ajaxurl , data, function(response) {
-			//jQuery(".easyFrontendFormular .easy-button").removeClass('deactive2');
 			response = jQuery.parseJSON(response);
 			jQuery("#showPrice").html(response[0]);
 			window.easyLastPrice = parseFloat(response[1]);

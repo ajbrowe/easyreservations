@@ -67,7 +67,7 @@
 
 			/**
 			 * Select from database
-			 * @global obj $wpdb Database class
+			 * @global object $wpdb Database class
 			 * @param int $id ID of reservation
 			 * @throws easyException #3
 			 */
@@ -80,7 +80,6 @@
 					return true;
 				} else {
 					throw new easyException( 'Reservation isn\'t existing ID: '.$id, 3 );
-					return false;
 				}
 			}
 
@@ -135,10 +134,11 @@
 
 			/**
 			 *	Calculate reservation; access with $obj->price
-			 * @param type $history if true $obj->history will contain a calculation history
+			 * @param bool $history if true $obj->history will contain a calculation history
+			 * @param bool $taxes if taxes should be calculated
 			 * @return int $obj->price
 			 */
-			public function Calculate($history = false){
+			public function Calculate($history = false, $taxes = true){
 				$this->price = 0;
 				$this->history = array();
 				$this->countpriceadd=0; // Count times (=days) a sum gets added to price
@@ -150,7 +150,7 @@
 					if(isset($price_per_person[1]) && $price_per_person[1] == 1) $this->once = true;
 					$price_per_person = $price_per_person[0];
 				}
-				$taxes = get_post_meta($this->resource, 'easy-resource-taxes', true);
+				if($taxes) $taxes = get_post_meta($this->resource, 'easy-resource-taxes', true);
 				if($this->departure == 0) $this->departure = $this->arrival+$this->interval;
 
 				if(!empty($this->pricepaid)){
@@ -160,8 +160,12 @@
 						$this->fixed = true;
 						$this->countpriceadd++;
 					}
-					if(isset($price_xpl[1]) && $price_xpl[1] > 0) $this->paid=str_replace(',','.',$price_xpl[1]);
-					if(!is_numeric($this->paid) || $this->paid <= 0) $this->paid = 0;
+					if(isset($price_xpl[1]) && $price_xpl[1] > 0){
+						$this->paid = (float) str_replace(',','.',$price_xpl[1]);
+					}
+					if(!is_numeric($this->paid) || $this->paid <= 0){
+						$this->paid = 0;
+					}
 				}
 				if(!isset($this->fixed)){
 					if(!empty($filters)){
@@ -295,10 +299,9 @@
 							$plus = 15;
 						}
 
-						if(!isset($this->fixed)) {
-							$tax_amount = $theprice / 100 * $tax[1];
-							$this->price += $tax_amount;
-						} else $tax_amount = $theprice * (1-1/(1+$tax[1]/100));
+						$tax_amount = $theprice / 100 * $tax[1];
+						if(!isset($this->fixed)) $this->price += $tax_amount;
+						else $tax_amount = $theprice * (1-1/(1+$tax[1]/100));
 
 						$this->taxamount += $tax_amount;
 						$this->taxrate += $tax[1];
@@ -388,10 +391,15 @@
 								}
 							}
 							if($true){
+								if(substr($amount, -1) == "%")
+									$amount= $this->price/100*str_replace("%", "", $amount);
+								else
+									$amount = $amount;
+
 								if(is_numeric($clause['price'])){
 									$amount = $clause['price'];
-									if($clause['mult'] && $clause['mult'] !== 'x') $amount = $this->multiplyAmount($clause['mult'], $amount);
-
+									if($clause['mult'] && $clause['mult'] !== 'x')
+										$amount = $this->multiplyAmount($clause['mult'], $amount);
 								}
 							}
 							if(is_numeric($clause['price'])) $last_next = false;
@@ -541,6 +549,8 @@
 									$addend  = " AND HOUR($departure) = HOUR('$startdate')";
 								} else $addstart1 .= " AND (DATE($arrival) != DATE($departure) OR HOUR($departure) > 11)";
 								//TODO: fix
+								//$case = "Case When DATE($departure) = DATE('$startdate')$addend AND HOUR($departure < 13) Then 0 Else 1 End";
+
 								$case = "Case When DATE($departure) = DATE('$startdate')$addend Then 0 Else 1 End";
 								$caseArrival = "Case When (DATE($departure) = DATE('$startdate')$addend)||(DATE($arrival) = DATE('$startdate')$addstart) Then 1 Else 0 End";
 							}
@@ -1074,16 +1084,14 @@
 						} elseif($field[0]=="email"){
 							$theForm=preg_replace('/\['.$fields.']/U', $this->email, $theForm);
 						} elseif($field[0]=="arrivaldate" || $field[0]=="arrival" || $field[0]=="date-from"){
-							if(isset($field['format'])) $format = $field['format'];
-							else $format = RESERVATIONS_DATE_FORMAT_SHOW;
+							$format = isset($field['format']) ? $field['format'] : RESERVATIONS_DATE_FORMAT_SHOW;
 							$theForm=preg_replace('/\['.$fields.']/U', date($format, $this->arrival), $theForm);
 						} elseif($field[0]=="changelog"){
 							$changelog = '';
 							if(isset($this->changelog)) $changelog = $this->changelog;
 							$theForm=preg_replace('/\['.$fields.']/U', $changelog, $theForm);
 						} elseif($field[0]=="departuredate" || $field[0]=="departure"){
-							if(isset($field['format'])) $format = $field['format'];
-							else $format = RESERVATIONS_DATE_FORMAT_SHOW;
+							$format = isset($field['format']) ? $field['format'] : RESERVATIONS_DATE_FORMAT_SHOW;
 							$theForm=preg_replace('/\['.$fields.']/U', date($format, $this->departure), $theForm);
 						} elseif($field[0]=="units" || $field[0]=="times"){
 							$theForm=preg_replace('/\['.$fields.']/U', $this->times, $theForm);
@@ -1188,7 +1196,7 @@
 					if(function_exists('easyreservations_send_multipart_mail')) $msg = easyreservations_send_multipart_mail($theForm);
 					else {
 						$theForm = explode('<--HTML-->', $theForm);
-						$msg = str_replace('<br>', "\n",str_replace(']', '',  str_replace('[', '', $theForm[0])));
+						$msg = htmlspecialchars_decode(str_replace('<br>', "\n",str_replace(']', '',  str_replace('[', '', $theForm[0]))));
 					}
 
 					if(empty($support_mail)) throw new easyException( 'No support email found', 6 );
@@ -1263,7 +1271,7 @@
 					foreach($informations as $information){
 						if(isset($this->$information)) $array[$information] = $this->$information;
 					}
-					if($this->admin && $this->status != 'yes') $theval = false;
+					if($this->admin && $this->status !== 'yes') $theval = false;
 					else $theval = $this->Validate('send', 0);
 					if(!$validate || !$theval){
 						$edit = $this->edit($this->ReservationToArray($array));

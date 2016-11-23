@@ -5,7 +5,7 @@
 class easyReservations_form_widget extends WP_Widget {
 	/** constructor */
 	function __construct() {
-		parent::WP_Widget( /* Base ID */'easyReservations_form_widget', /* Name */'easyReservations Widget', array( 'description' => 'easyReservations form and calendar widget' ) );
+		parent::__construct( /* Base ID */'easyReservations_form_widget', /* Name */'easyReservations Widget', array( 'description' => 'easyReservations form and calendar widget' ) );
 	}
 
 	/** @see WP_Widget::widget */
@@ -68,7 +68,7 @@ class easyReservations_form_widget extends WP_Widget {
 				} elseif($field[0]=="country"){
 					$theForm=str_replace('['.$fields.']', '<select id="easy-widget-country" name="country">'.easyreservations_country_options('').'</select>', $theForm);
 				} elseif($field[0]=="rooms" || $field[0]=="resources"){
-					$exclude = explode(",",$field["exclude"]);
+					$exclude = explode(",", isset($field["exclude"]) ? $field["exclude"] : '');
 					$theForm=str_replace('['.$fields.']', '<select name="easyroom" id="form_room">'.easyreservations_resource_options($calendar_room, 0, $exclude).'</select>', $theForm);
 				}
 			}

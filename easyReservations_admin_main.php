@@ -35,7 +35,7 @@ function reservation_main_page(){
 					$theres->editReservation(array('status'), false);
 					$theres->destroy();
 				}
-				if($to!=1) $linkundo=implode("&bulkArr[]=", $listes); else $linkundo=$listes;
+				if($to!==1) $linkundo=implode("&bulkArr[]=", $listes); else $linkundo=$listes;
 				if($to==1)  $anzahl=__('Reservation', 'easyReservations'); else $anzahl=$to.' '.__('Reservations', 'easyReservations');
 				$easy_errors[] = array( 'updated', $anzahl.' '.__( 'moved to trash' , 'easyReservations' ).'. <a href="'.wp_nonce_url('admin.php?page=reservations&bulkArr[]='.$linkundo.'&bulk=2', 'easy-main-bulk').'">'.__( 'Undo' , 'easyReservations' ).'</a>');
 			} elseif($_GET['bulk']=="2"){ //  If Undo Trashing
@@ -130,7 +130,7 @@ function reservation_main_page(){
 			}
 		}
 
-		$res = new Reservation($edit);
+		$res = new Reservation($edit, false, true);
 		try {
 			$res->save = (array) $res;
 			$res->name = stripslashes($_POST["name"]);
@@ -228,7 +228,7 @@ function reservation_main_page(){
 		$reservation_date = EasyDateTime::createFromFormat(RESERVATIONS_DATE_FORMAT.' H:i:s', $_POST["reservation_date"].' 00:00:00');
 		if(!$reservation_date instanceof DateTime) $reservation_date = time();
 		if($arrival instanceof DateTime && $departure instanceof DateTime){
-			$res = new Reservation(false, array('name' => $_POST["name"], 'email' => $_POST["email"], 'arrival' => $arrival->getTimestamp()+($from_hour*60),'departure' => $departure->getTimestamp()+($to_hour*60),'resource' => (int) $_POST["room"],'resourcenumber' => $resresourcenumber,'country' => $_POST["country"], 'adults' => $resadults,	'custom' => maybe_unserialize($ADDcustomFields),'prices' => maybe_unserialize($ADDcustomPfields),'childs' => $reschilds,'reservated' => $reservation_date->getTimestamp(),'status' => $_POST["reservationStatus"],'user' => $_POST["edit_user"]));
+			$res = new Reservation(false, array('name' => $_POST["name"], 'email' => $_POST["email"], 'arrival' => $arrival->getTimestamp()+($from_hour*60),'departure' => $departure->getTimestamp()+($to_hour*60),'resource' => (int) $_POST["room"],'resourcenumber' => $resresourcenumber,'country' => $_POST["country"], 'adults' => $resadults,	'custom' => maybe_unserialize($ADDcustomFields),'prices' => maybe_unserialize($ADDcustomPfields),'childs' => $reschilds,'reservated' => $reservation_date->getTimestamp(),'status' => $_POST["reservationStatus"],'user' => $_POST["edit_user"]), true);
 			try {
 				$thePriceAdd = '';
 				if(isset($_POST["fixReservation"]) && $_POST["fixReservation"] == "on"){
@@ -269,7 +269,7 @@ function reservation_main_page(){
 		elseif(isset($sendmail)) $theid = $sendmail;
 		elseif(isset($delete)) $theid = $delete;
 		
-		if(!isset($res)) $res = new Reservation($theid);
+		if(!isset($res)) $res = new Reservation($theid, false, true);
 		try {
 			$res->resourcenumbername = easyreservations_get_roomname($res->resourcenumber, $res->resource);
 			if(empty($res->custom)) $customs = ''; else $customs=$res->getCustoms($res->custom, 'cstm');
@@ -300,7 +300,7 @@ function reservation_main_page(){
   }
 
 	if(isset($sendmail) && isset($_POST['thesendmail'])){
-		$theres = new Reservation((int) $sendmail);
+		$theres = new Reservation((int) $sendmail, false, true);
 		try {
 			$test = $theres->sendMail('reservations_email_sendmail', $theres->email);
 			$easy_errors[] = array( 'updated' , __( 'Email sent successfully', 'easyReservations' ));
@@ -320,7 +320,7 @@ function reservation_main_page(){
 
 		if(!isset($_POST['sendthemail'])) $emailformation = false;
 
-		$theres = new Reservation($theid);
+		$theres = new Reservation($theid, false, true);
 		try {
 			$theres->Calculate();
 			if(isset($_POST['roomexactly'])) $theres->resourcenumber = $_POST['roomexactly'];
@@ -407,8 +407,8 @@ if($show['show_overview']==1){ //Hide Overview completly
 		this.generateXMLHttpReqObjThree = generateXMLHttpReqObjThree;
 	}
 
-	xxy = new generateAJAXObjektThree();
-	resObjektThree = xxy.generateXMLHttpReqObjThree();
+	var xxy = new generateAJAXObjektThree();
+	var resObjektThree = xxy.generateXMLHttpReqObjThree();
 	var save = 0;
 	var countov = 0;
 	var the_ov_interval = 86400;
@@ -959,7 +959,7 @@ if(!isset($approve) && !isset($delete) && !isset($view) && !isset($edit) && !iss
 
 								foreach($queryArrivalers as $arrivler){
 									$count++;
-									$depature = new Reservation($arrivler->id);
+									$depature = new Reservation($arrivler->id, false, true);
 									$depature->Calculate();
 									if($count % 2 == 0) $class="odd";
 									else $class="even";?>
@@ -984,7 +984,7 @@ if(!isset($approve) && !isset($delete) && !isset($view) && !isset($edit) && !iss
 							$count = 0;
 							foreach($queryDepartures as $depaturler){
 								$count++;
-								$depature = new Reservation($depaturler->id);
+								$depature = new Reservation($depaturler->id, false, true);
 								$depature->Calculate();
 								if($count % 2 == 0) $class="odd";
 								else $class="even";?>
@@ -1054,7 +1054,7 @@ if(!isset($approve) && !isset($delete) && !isset($view) && !isset($edit) && !iss
 					<th colspan="2">
 						<?php if(isset($approve)) { echo __( 'Approve' , 'easyReservations' ); } elseif(isset($delete)) { echo __( 'Reject' , 'easyReservations' );  } elseif(isset($view)) { echo __( 'View' , 'easyReservations' ); } echo ' '.__( 'Reservation' , 'easyReservations' ); ?> <span class="headerlink"><a href="admin.php?page=reservations&edit=<?php echo $res->id; ?>">#<?php echo $res->id; ?></a></span>
 						<span style="float:right">
-							<a href="admin.php?page=reservations&edit=<?php echo $res->id; ?>" class="button""><?php echo __( 'Edit' , 'easyReservations' ); ?></a>
+							<a href="admin.php?page=reservations&edit=<?php echo $res->id; ?>" class="button"><?php echo __( 'Edit' , 'easyReservations' ); ?></a>
 							<?php do_action('easy-view-title-right', $res); ?>
 						</span>
 					</th>
